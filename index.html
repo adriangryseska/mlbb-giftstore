@@ -13,9 +13,9 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #b0c4de 0%, #6b7fa3 100%);
+            background: linear-gradient(135deg, #e6e9f0 0%, #eef1f7 100%);
             min-height: 100vh;
-            color: #232f3e;
+            color: #3a4151;
         }
 
         .container {
@@ -26,24 +26,24 @@
 
         .header {
             text-align: center;
-            margin-bottom: 44px;
-            color: #232f3e;
+            margin-bottom: 40px;
+            color: #3a4151;
         }
 
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             letter-spacing: 1px;
-            color: #22325a;
-            text-shadow: 0 2px 12px rgba(34, 50, 90, 0.08);
+            color: #3a4151;
+            text-shadow: 0 2px 12px rgba(180,190,210,0.13);
         }
 
         .header .subtitle {
-            font-size: 1.15rem;
+            font-size: 1.08rem;
             opacity: 0.93;
             margin-bottom: 8px;
-            color: #3b4a6b;
+            color: #7b8ca7;
         }
 
         .store-status {
@@ -56,67 +56,68 @@
             letter-spacing: 1px;
         }
         .store-status.open {
-            background: #e8f8ee;
-            color: #1abc9c;
-            border: 1.5px solid #1abc9c;
+            background: #eafaf1;
+            color: #3bb77e;
+            border: 1.5px solid #3bb77e;
         }
         .store-status.close {
-            background: #fff0f0;
-            color: #e74c3c;
-            border: 1.5px solid #e74c3c;
+            background: #fbeaea;
+            color: #e57373;
+            border: 1.5px solid #e57373;
         }
 
         .update-info {
-            background: #dbe6f6;
+            background: #f5f7fa;
             padding: 8px 20px;
             border-radius: 25px;
             display: inline-block;
             font-size: 0.97rem;
-            border: 1px solid #b0c4de;
-            color: #22325a;
+            border: 1px solid #dbe2ef;
+            color: #7b8ca7;
             margin-top: 4px;
         }
 
         .requirement {
-            background: #f2f6fa;
-            padding: 22px 18px;
+            background: #f5f7fa;
+            padding: 20px 16px;
             border-radius: 15px;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             text-align: center;
-            border: 1px solid #b0c4de;
-            box-shadow: 0 4px 16px rgba(52, 105, 154, 0.06);
+            border: 1px solid #dbe2ef;
+            box-shadow: 0 4px 16px rgba(180,190,210,0.08);
         }
 
         .requirement h3 {
-            color: #34699a;
-            font-size: 1.13rem;
+            color: #7b8ca7;
+            font-size: 1.08rem;
             margin-bottom: 8px;
         }
 
         .categories {
             display: grid;
-            gap: 38px;
+            gap: 48px; /* sebelumnya 30px, jadi lebih renggang antar kategori */
             margin-bottom: 44px;
         }
 
         .category {
-            border: 2px solid #b0c4de;
-            box-shadow: 0 4px 18px rgba(52, 105, 154, 0.07);
+            border: 2px solid #e6e9f0;
+            box-shadow: 0 4px 18px rgba(180,190,210,0.07);
             border-radius: 18px;
-            background: #f8fafc;
+            background: #fafdff;
             transition: box-shadow 0.3s, border 0.3s;
-            padding: 28px 18px 24px 18px;
+            padding: 18px; /* Tambahkan padding agar isi tidak terlalu pojok */
         }
 
         .category:hover {
-            border: 2px solid #6b7fa3;
-            box-shadow: 0 8px 28px rgba(52, 105, 154, 0.13);
+            border: 2px solid #bfc8e6;
+            box-shadow: 0 8px 28px rgba(180,190,210,0.13);
         }
 
         .category h2 {
-            color: #2a3c5a;
-            font-size: 1.22rem;
-            margin-bottom: 22px;
+            color: #3a4151;
+            font-size: 1.13rem;
+            margin-bottom: 0.5rem; /* Perkecil jarak bawah judul */
+            padding: 4px 0;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -125,31 +126,43 @@
 
         .category-icon {
             font-size: 1.5rem;
-            color: #6b7fa3;
+            color: #bfc8e6;
         }
 
         .items-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 28px;
+            position: relative;
+            z-index: 0;
+            padding: 18px;
         }
 
         .item {
-            background: #f2f6fa;
+            background: #f7faff;
             border-radius: 14px;
-            box-shadow: 0 2px 12px rgba(52, 105, 154, 0.06);
-            padding: 22px 14px 18px 14px;
-            transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
-            border: 1.5px solid #b0c4de;
-            margin-bottom: 0;
+            box-shadow: 0 2px 12px rgba(180,190,210,0.08);
+            padding: 12px 10px 10px 10px;
+            transition: box-shadow 0.2s, border-color 0.2s, outline 0.2s;
+            border: 1.5px solid #bfc8e6;
+            margin: 0;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
+            color: #23272f;
+            z-index: 1;
+        }
+
+        /* Hilangkan margin-top khusus item pertama */
+        .items-grid .item:first-child {
+            margin-top: 0;
         }
 
         .item:hover {
-            box-shadow: 0 6px 20px rgba(52, 105, 154, 0.13);
-            transform: translateY(-2px) scale(1.02);
-            border: 1.5px solid #6b7fa3;
+            box-shadow: 0 12px 32px 0 rgba(180,190,210,0.22);
+            border-color: #bfc8e6;
+            outline: 2.5px solid #bfc8e6;
+            outline-offset: 2px;
+            z-index: 10;
         }
 
         .item::before {
@@ -158,19 +171,13 @@
             inset: 0;
             border-radius: 12px;
             pointer-events: none;
-            border: 1.5px dashed #b0c4de;
-            opacity: 0.3;
+            border: 1.5px dashed #dbe2ef;
+            opacity: 0.13;
             z-index: 0;
         }
 
-        .item-icon img {
-            width: 36px;
-            height: 36px;
-            margin-bottom: 10px;
-        }
-
         .badge {
-            background: #f1f3f6;
+            background: #eaf0fb;
             border-radius: 8px;
             padding: 4px 10px;
             font-size: 0.95rem;
@@ -181,31 +188,30 @@
             font-weight: 600;
             font-size: 1rem;
             margin-bottom: 8px;
-            color: #2c3e50;
+            color: #3a4151;
         }
 
         .item-details {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 18px; /* lebih lega */
+            margin-bottom: 14px;
         }
 
         .diamond-price {
-            color: #7f8c8d;
+            color: #7b8ca7;
             font-size: 0.9rem;
-            /* text-decoration: line-through; */ /* Hapus jika bukan harga diskon */
         }
 
         .rupiah-price {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            color: #113F67;
+            color: #3bb77e;
         }
 
         .premium {
-            border: 2px solid #ffd700 !important;
-            box-shadow: 0 6px 24px rgba(255, 215, 0, 0.10), 0 3px 12px rgba(52, 105, 154, 0.08);
+            border: 2px solid #ffe066 !important;
+            box-shadow: 0 6px 24px rgba(255, 224, 102, 0.10), 0 3px 12px rgba(180,190,210, 0.08);
             background: linear-gradient(120deg, #fffbe6 80%, #f7fafd 100%);
         }
 
@@ -213,13 +219,13 @@
             position: absolute;
             top: 14px;
             right: 14px;
-            background: linear-gradient(90deg, #ffd700, #ffb300);
+            background: linear-gradient(90deg, #ffe066, #ffd700);
             color: #fff;
             font-size: 0.85rem;
             font-weight: bold;
             padding: 5px 14px;
             border-radius: 18px;
-            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.13);
+            box-shadow: 0 2px 8px rgba(255, 224, 102, 0.13);
             z-index: 2;
             letter-spacing: 0.5px;
             display: flex;
@@ -234,7 +240,7 @@
         .order-btn {
             margin-top: 10px;
             width: 100%;
-            background: linear-gradient(135deg, #7da6d9, #34699a);
+            background: linear-gradient(135deg, #bfc8e6, #7b8ca7);
             color: white;
             border: none;
             padding: 12px;
@@ -246,40 +252,41 @@
         }
 
         .order-btn:hover {
-            background: linear-gradient(135deg, #34699a, #7da6d9);
+            background: linear-gradient(135deg, #7b8ca7, #bfc8e6);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 105, 154, 0.13);
+            box-shadow: 0 5px 15px rgba(180,190,210,0.13);
         }
 
         .contact-section {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(245,247,250,0.98);
+            backdrop-filter: blur(8px);
             border-radius: 20px;
-            padding: 30px;
+            padding: 24px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 30px rgba(180,190,210,0.13);
+            border: 1px solid rgba(191,200,230,0.25);
+            color: #3a4151;
         }
 
         .contact-section h3 {
-            color: #113F67;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+            color: #23272f; /* Samakan dengan teks utama, sebelumnya abu-abu */
+            font-size: 1.15rem;
+            margin-bottom: 12px;
         }
 
         .contact-info {
-            color: #555;
-            margin-bottom: 20px;
+            color: #7b8ca7;
+            margin-bottom: 16px;
             line-height: 1.6;
         }
 
         .dm-btn {
-            background: linear-gradient(135deg, #34699a, #7da6d9);
+            background: linear-gradient(135deg, #bfc8e6, #7b8ca7);
             color: white;
-            padding: 13px 26px;
+            padding: 12px 22px;
             border: none;
             border-radius: 50px;
-            font-size: 1.05rem;
+            font-size: 1.02rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -288,48 +295,77 @@
         }
 
         .dm-btn:hover {
-            background: linear-gradient(135deg, #7da6d9, #34699a);
+            background: linear-gradient(135deg, #7b8ca7, #bfc8e6);
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(52, 105, 154, 0.13);
+            box-shadow: 0 6px 16px rgba(180,190,210,0.13);
         }
 
         .warning {
             background: #fffbe6;
-            border-left: 4px solid #ffd700;
-            padding: 13px;
+            border-left: 4px solid #ffe066;
+            padding: 12px;
             border-radius: 8px;
-            margin-top: 18px;
+            margin-top: 16px;
             color: #b48800;
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 18px 12px 28px 12px;
+                padding: 16px 5vw 22px 5vw;
             }
             .category {
-                padding: 16px 10px 16px 10px;
+                padding: 12px 4vw 12px 4vw;
             }
             .items-grid {
                 grid-template-columns: 1fr;
-                gap: 18px;
+                gap: 14px;
             }
             .item {
-                padding: 16px 10px 14px 10px;
+                padding: 12px 6px 10px 6px;
+                margin: 16px;
             }
             .header h1 {
-                font-size: 1.6rem;
+                font-size: 1.3rem;
             }
             .category h2 {
-                font-size: 1.08rem;
-                margin-bottom: 16px;
+                font-size: 1rem;
+                margin-bottom: 12px;
             }
             .order-btn, .dm-btn {
-                font-size: 1rem;
-                padding: 12px 10px;
+                font-size: 0.97rem;
+                padding: 10px 8px;
             }
             .contact-section {
-                padding: 16px 8px;
+                padding: 12px 4px;
             }
+        }
+
+        .category .items-grid {
+            transition: max-height 0.3s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+            overflow: hidden;
+            max-height: 2000px;
+            opacity: 1;
+        }
+        .category.collapsed .items-grid {
+            max-height: 0;
+            opacity: 0;
+            pointer-events: none;
+            padding: 0 !important; /* Hapus padding saat collapsed */
+            margin: 0 !important;
+        }
+        .category-toggle {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+        .category-toggle::after {
+            content: '▼';
+            font-size: 1rem;
+            margin-left: 8px;
+            transition: transform 0.2s;
+        }
+        .category.collapsed .category-toggle::after {
+            transform: rotate(-90deg);
         }
     </style>
     <script>
@@ -363,56 +399,9 @@
         </div>
 
         <div class="categories">
-            <!-- Live Stream Gifts -->
-            <div class="category">
-                <h2><span class="category-icon">🎥</span>Gift Live Stream</h2>
-                <div class="items-grid">
-                    <div class="item">
-                        <div class="item-name">Flower</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 2</span>
-                            <span class="rupiah-price">Rp 240</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                    <div class="item">
-                        <div class="item-name">Jewelry</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 6</span>
-                            <span class="rupiah-price">Rp 710</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                    <div class="item">
-                        <div class="item-name">Roadster</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 250</span>
-                            <span class="rupiah-price">Rp 28.000</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                    <div class="item">
-                        <div class="item-name">Yacht</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 1000</span>
-                            <span class="rupiah-price">Rp 105.000</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                    <div class="item">
-                        <div class="item-name">Airplane</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 5000</span>
-                            <span class="rupiah-price">Rp 490.000</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hero & Skin Shop -->
-            <div class="category">
-                <h2><span class="category-icon">🎨</span>Gift Hero & Skin Shop</h2>
+            <!-- 1. Gift Hero & Skin Shop -->
+            <div class="category collapsed">
+                <h2 class="category-toggle"><span class="category-icon">🎨</span>Gift Hero & Skin Shop</h2>
                 <div class="items-grid">
                     <div class="item">
                         <div class="item-name">Skin Basic</div>
@@ -481,56 +470,9 @@
                 </div>
             </div>
 
-            <!-- Charisma Gifts -->
-            <div class="category">
-                <h2><span class="category-icon">💫</span>Gift Charisma</h2>
-                <div class="items-grid">
-                    <div class="item">
-                        <div class="item-name">Charisma</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 8</span>
-                            <span class="rupiah-price">Rp 300</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                    <div class="item">
-                        <div class="item-name">Charisma</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 20</span>
-                            <span class="rupiah-price">Rp 800</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                    <div class="item">
-                        <div class="item-name">Angel Ark</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 499</span>
-                            <span class="rupiah-price">Rp 44.000</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                    <div class="item">
-                        <div class="item-name">Paradise Island</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 499</span>
-                            <span class="rupiah-price">Rp 44.000</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                    <div class="item">
-                        <div class="item-name">Goldmoon Lantern</div>
-                        <div class="item-details">
-                            <span class="diamond-price">💎 999</span>
-                            <span class="rupiah-price">Rp 85.000</span>
-                        </div>
-                        <button class="order-btn">Pesan Sekarang</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Other Items -->
-            <div class="category">
-                <h2><span class="category-icon">🎁</span>Gift Item Lain</h2>
+            <!-- 2. Gift Item Shop -->
+            <div class="category collapsed">
+                <h2 class="category-toggle"><span class="category-icon">🎁</span>Gift Item Shop</h2>
                 <div class="items-grid">
                     <div class="item">
                         <div class="item-name">Emote</div>
@@ -599,12 +541,108 @@
                 </div>
             </div>
 
-            <!-- Collaboration Skins -->
-            <div class="category">
-                <h2><span class="category-icon">🪞</span>Gift Skin Kolaborasi</h2>
-                <div style="text-align: center; padding: 20px;">
-                    <p style="color: #555; margin-bottom: 15px;">Silakan chat admin untuk info ketersediaan dan harga skin kolaborasi.</p>
-                    <a href="#" class="dm-btn">Tanya Ketersediaan</a>
+            <!-- 3. Gift Charisma -->
+            <div class="category collapsed">
+                <h2 class="category-toggle"><span class="category-icon">💫</span>Gift Charisma</h2>
+                <div class="items-grid">
+                    <div class="item">
+                        <div class="item-name">Charisma</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 8</span>
+                            <span class="rupiah-price">Rp 300</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Charisma</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 20</span>
+                            <span class="rupiah-price">Rp 800</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Angel Ark</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 499</span>
+                            <span class="rupiah-price">Rp 44.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Paradise Island</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 499</span>
+                            <span class="rupiah-price">Rp 44.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Goldmoon Lantern</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 999</span>
+                            <span class="rupiah-price">Rp 85.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Gift Live Stream -->
+            <div class="category collapsed">
+                <h2 class="category-toggle"><span class="category-icon">🎥</span>Gift Live Stream</h2>
+                <div class="items-grid">
+                    <div class="item">
+                        <div class="item-name">Flower</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 2</span>
+                            <span class="rupiah-price">Rp 240</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Jewelry</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 6</span>
+                            <span class="rupiah-price">Rp 710</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Roadster</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 250</span>
+                            <span class="rupiah-price">Rp 28.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Yacht</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 1000</span>
+                            <span class="rupiah-price">Rp 105.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Airplane</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 5000</span>
+                            <span class="rupiah-price">Rp 490.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Gift Skin Kolaborasi -->
+            <div class="category collapsed">
+                <h2 class="category-toggle"><span class="category-icon">🪞</span>Gift Skin Kolaborasi</h2>
+                <div class="items-grid">
+                    <div style="text-align: center; padding: 20px;">
+                        <p style="color: #555; margin-bottom: 15px;">Silakan chat admin untuk info ketersediaan dan harga skin kolaborasi.</p>
+                        <a href="#" class="dm-btn">Tanya Ketersediaan</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -652,6 +690,14 @@
                 const waNumber = '62895357381660';
                 const waUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
                 window.open(waUrl, '_blank');
+            });
+        });
+
+        // Toggle category visibility
+        document.querySelectorAll('.category-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const category = this.closest('.category');
+                category.classList.toggle('collapsed');
             });
         });
     </script>
