@@ -1,1 +1,617 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB Gift Topup - Harga Terjangkau</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #e3eafc 0%, #c9d6ff 50%, #f7fafd 100%);
+            min-height: 100vh;
+            color: #2d3a4a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 16px 40px 16px; /* lebih lega */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2d3a4a;
+        }
+
+        .header h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 8px rgba(52, 105, 154, 0.07);
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.92;
+            margin-bottom: 5px;
+        }
+
+        .update-info {
+            background: #e3eafc;
+            padding: 8px 18px;
+            border-radius: 25px;
+            display: inline-block;
+            font-size: 0.9rem;
+            border: 1px solid #d1e3fa;
+        }
+
+        .requirement {
+            background: #f7fafd;
+            padding: 18px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid #e3eafc;
+            box-shadow: 0 4px 16px rgba(52, 105, 154, 0.06);
+        }
+
+        .requirement h3 {
+            color: #34699a;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .categories {
+            display: grid;
+            gap: 36px;
+            margin-bottom: 40px;
+        }
+
+        .category {
+            border: 2px solid #e3eafc;
+            box-shadow: 0 4px 18px rgba(52, 105, 154, 0.07);
+            border-radius: 18px;
+            background: #fff;
+            transition: box-shadow 0.3s, border 0.3s;
+            padding: 26px 16px 22px 16px;
+        }
+
+        .category:hover {
+            border: 2px solid #b7d0ea;
+            box-shadow: 0 8px 28px rgba(52, 105, 154, 0.13);
+        }
+
+        .category h2 {
+            color: #34699a;
+            font-size: 1.2rem;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-icon {
+            font-size: 1.5rem;
+            color: #7da6d9;
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+
+        .item {
+            background: #f7fafd;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(52, 105, 154, 0.06);
+            padding: 20px 14px 16px 14px;
+            transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+            border: 1.5px solid #e3eafc;
+            margin-bottom: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item:hover {
+            box-shadow: 0 6px 20px rgba(52, 105, 154, 0.13);
+            transform: translateY(-2px) scale(1.02);
+            border: 1.5px solid #7da6d9;
+        }
+
+        .item::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            pointer-events: none;
+            border: 1.5px dashed #e3eafc;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .item-icon img {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            background: #f1f3f6;
+            border-radius: 8px;
+            padding: 4px 10px;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .item-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px; /* lebih lega */
+        }
+
+        .diamond-price {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            /* text-decoration: line-through; */ /* Hapus jika bukan harga diskon */
+        }
+
+        .rupiah-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #113F67;
+        }
+
+        .premium {
+            border: 2px solid #ffd700 !important;
+            box-shadow: 0 6px 24px rgba(255, 215, 0, 0.10), 0 3px 12px rgba(52, 105, 154, 0.08);
+            background: linear-gradient(120deg, #fffbe6 80%, #f7fafd 100%);
+        }
+
+        .premium-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: linear-gradient(90deg, #ffd700, #ffb300);
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: bold;
+            padding: 5px 14px;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.13);
+            z-index: 2;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .premium .item-name {
+            color: #b48800;
+        }
+
+        .order-btn {
+            margin-top: 10px;
+            width: 100%;
+            background: linear-gradient(135deg, #7da6d9, #34699a);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .order-btn:hover {
+            background: linear-gradient(135deg, #34699a, #7da6d9);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 105, 154, 0.13);
+        }
+
+        .contact-section {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .contact-section h3 {
+            color: #113F67;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .dm-btn {
+            background: linear-gradient(135deg, #34699a, #7da6d9);
+            color: white;
+            padding: 13px 26px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .dm-btn:hover {
+            background: linear-gradient(135deg, #7da6d9, #34699a);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(52, 105, 154, 0.13);
+        }
+
+        .warning {
+            background: #fffbe6;
+            border-left: 4px solid #ffd700;
+            padding: 13px;
+            border-radius: 8px;
+            margin-top: 18px;
+            color: #b48800;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 14px 4px 22px 4px;
+            }
+            .category {
+                padding: 12px 4px 12px 4px;
+            }
+            .items-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .item {
+                padding: 14px 6px 12px 6px;
+            }
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            .category h2 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            .order-btn, .dm-btn {
+                font-size: 0.97rem;
+                padding: 10px 8px;
+            }
+            .contact-section {
+                padding: 12px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MLBB Gift</h1>
+            <div class="subtitle">Harga terjangkau &middot; Proses cepat</div>
+            <div class="update-info">📅 Update: 28 Juli 2025</div>
+        </div>
+
+        <div class="requirement">
+            <h3>📌 Syarat Penting</h3>
+            <p>Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift.</p>
+        </div>
+
+        <div class="categories">
+            <!-- Live Stream Gifts -->
+            <div class="category">
+                <h2><span class="category-icon">🎥</span>Gift Live Stream</h2>
+                <div class="items-grid">
+                    <div class="item">
+                        <div class="item-name">Flower</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 2</span>
+                            <span class="rupiah-price">Rp 240</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Jewelry</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 6</span>
+                            <span class="rupiah-price">Rp 710</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Roadster</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 250</span>
+                            <span class="rupiah-price">Rp 28.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Yacht</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 1000</span>
+                            <span class="rupiah-price">Rp 105.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Airplane</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 5000</span>
+                            <span class="rupiah-price">Rp 490.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero & Skin Shop -->
+            <div class="category">
+                <h2><span class="category-icon">🎨</span>Gift Hero & Skin Shop</h2>
+                <div class="items-grid">
+                    <div class="item">
+                        <div class="item-name">Skin Basic</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 269</span>
+                            <span class="rupiah-price">Rp 26.900</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Skin Basic</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 299</span>
+                            <span class="rupiah-price">Rp 29.900</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Skin Elite</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 399</span>
+                            <span class="rupiah-price">Rp 39.900</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Skin Elite</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 599</span>
+                            <span class="rupiah-price">Rp 61.900</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Hero</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 599</span>
+                            <span class="rupiah-price">Rp 61.900</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Skin Special</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 749</span>
+                            <span class="rupiah-price">Rp 81.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item premium">
+                        <div class="item-name">Skin Epic</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 899</span>
+                            <span class="rupiah-price">Rp 100.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item premium">
+                        <div class="item-name">Skin Lightborn</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 1089</span>
+                            <span class="rupiah-price">Rp 125.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charisma Gifts -->
+            <div class="category">
+                <h2><span class="category-icon">💫</span>Gift Charisma</h2>
+                <div class="items-grid">
+                    <div class="item">
+                        <div class="item-name">Charisma</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 8</span>
+                            <span class="rupiah-price">Rp 300</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Charisma</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 20</span>
+                            <span class="rupiah-price">Rp 800</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Angel Ark</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 499</span>
+                            <span class="rupiah-price">Rp 44.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Paradise Island</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 499</span>
+                            <span class="rupiah-price">Rp 44.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Goldmoon Lantern</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 999</span>
+                            <span class="rupiah-price">Rp 85.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Items -->
+            <div class="category">
+                <h2><span class="category-icon">🎁</span>Gift Item Lain</h2>
+                <div class="items-grid">
+                    <div class="item">
+                        <div class="item-name">Emote</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 79</span>
+                            <span class="rupiah-price">Rp 7.500</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item premium">
+                        <div class="item-name">Emote</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 109</span>
+                            <span class="rupiah-price">Rp 12.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Rename Card</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 239</span>
+                            <span class="rupiah-price">Rp 24.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Squad Rename Card</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 299</span>
+                            <span class="rupiah-price">Rp 30.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Flag Change Card</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 300</span>
+                            <span class="rupiah-price">Rp 32.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-name">Creation Camp</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 50</span>
+                            <span class="rupiah-price">Rp 6.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item premium">
+                        <div class="item-name">Starlight</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 300</span>
+                            <span class="rupiah-price">Rp 32.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                    <div class="item premium">
+                        <div class="item-name">Premium Starlight</div>
+                        <div class="item-details">
+                            <span class="diamond-price">💎 750</span>
+                            <span class="rupiah-price">Rp 74.000</span>
+                        </div>
+                        <button class="order-btn">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaboration Skins -->
+            <div class="category">
+                <h2><span class="category-icon">🪞</span>Gift Skin Kolaborasi</h2>
+                <div style="text-align: center; padding: 20px;">
+                    <p style="color: #555; margin-bottom: 15px;">Silakan chat admin untuk info ketersediaan dan harga skin kolaborasi.</p>
+                    <a href="#" class="dm-btn">Tanya Ketersediaan</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h3>📩 Tertarik? Hubungi Kami!</h3>
+            <div class="contact-info">
+                <p>Proses cepat & terpercaya.</p>
+                <p>Stok terbatas, pastikan cek ketersediaan sebelum order.</p>
+            </div>
+            <a href="#" class="dm-btn">💬 Chat WhatsApp</a>
+            <div class="warning">
+                <strong>⚠️ Penting:</strong> Stok dapat berubah sewaktu-waktu. Silakan konfirmasi ketersediaan sebelum melakukan pemesanan.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click handlers for order buttons
+        document.querySelectorAll('.order-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const item = this.closest('.item');
+                const itemName = item.querySelector('.item-name').textContent;
+                const price = item.querySelector('.rupiah-price').textContent;
+
+                // Template pesan WhatsApp
+                const message = `Halo, saya ingin memesan ${itemName} dengan harga ${price}. Apakah stock masih tersedia?`;
+                const encodedMessage = encodeURIComponent(message);
+
+                // Ganti nomor dengan nomor WhatsApp Anda
+                const waNumber = '62895357381660';
+                const waUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+
+                window.open(waUrl, '_blank');
+            });
+        });
+
+        // Add click handlers for DM buttons
+        document.querySelectorAll('.dm-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Template pesan WhatsApp
+                const message = 'Halo, saya ingin menanyakan ketersediaan dan harga item MLBB Gift. Mohon infonya ya!';
+                const encodedMessage = encodeURIComponent(message);
+                const waNumber = '62895357381660';
+                const waUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+                window.open(waUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
