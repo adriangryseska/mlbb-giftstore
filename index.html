@@ -961,7 +961,7 @@
             // Tombol kontak utama
             document.getElementById('mainContactBtn').addEventListener('click', function(e) {
                 e.preventDefault();
-                const message = 'Halo! Saya ingin menanyakan ketersediaan item MLBB Gift. Mohon informasinya, terima kasih!';
+                const message = 'Halo! Saya ingin menanyakan ketersediaan skin atau item MLBB via gift. Mohon informasinya, terima kasih!';
                 const encodedMessage = encodeURIComponent(message);
                 const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
                 window.open(waUrl, '_blank');
