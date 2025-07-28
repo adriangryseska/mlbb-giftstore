@@ -332,13 +332,28 @@
             }
         }
     </style>
+    <script>
+        // Ganti ke 'open' atau 'close' sesuai status toko
+        const STORE_STATUS = 'close'; // 'open' atau 'close'
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const statusEl = document.querySelector('.store-status');
+            if (STORE_STATUS === 'open') {
+                statusEl.className = 'store-status open';
+                statusEl.textContent = '🟢 OPEN';
+            } else {
+                statusEl.className = 'store-status close';
+                statusEl.textContent = '🔴 CLOSE';
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>MLBB Gift</h1>
             <div class="subtitle">Harga terjangkau &middot; Proses cepat</div>
-            <div class="store-status open">🟢 OPEN</div>
+            <div class="store-status"></div>
             <div class="update-info">📅 Update: 28 Juli 2025</div>
         </div>
 
