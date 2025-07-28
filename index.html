@@ -13,108 +13,134 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #e3eafc 0%, #c9d6ff 50%, #f7fafd 100%);
+            background: linear-gradient(135deg, #b0c4de 0%, #6b7fa3 100%);
             min-height: 100vh;
-            color: #2d3a4a;
+            color: #232f3e;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 32px 16px 40px 16px; /* lebih lega */
+            padding: 36px 20px 44px 20px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            color: #2d3a4a;
+            margin-bottom: 44px;
+            color: #232f3e;
         }
 
         .header h1 {
-            font-size: 2.3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 8px rgba(52, 105, 154, 0.07);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            color: #22325a;
+            text-shadow: 0 2px 12px rgba(34, 50, 90, 0.08);
         }
 
         .header .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.92;
-            margin-bottom: 5px;
+            font-size: 1.15rem;
+            opacity: 0.93;
+            margin-bottom: 8px;
+            color: #3b4a6b;
+        }
+
+        .store-status {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.08rem;
+            margin: 10px 0 6px 0;
+            padding: 5px 18px;
+            border-radius: 18px;
+            letter-spacing: 1px;
+        }
+        .store-status.open {
+            background: #e8f8ee;
+            color: #1abc9c;
+            border: 1.5px solid #1abc9c;
+        }
+        .store-status.close {
+            background: #fff0f0;
+            color: #e74c3c;
+            border: 1.5px solid #e74c3c;
         }
 
         .update-info {
-            background: #e3eafc;
-            padding: 8px 18px;
+            background: #dbe6f6;
+            padding: 8px 20px;
             border-radius: 25px;
             display: inline-block;
-            font-size: 0.9rem;
-            border: 1px solid #d1e3fa;
+            font-size: 0.97rem;
+            border: 1px solid #b0c4de;
+            color: #22325a;
+            margin-top: 4px;
         }
 
         .requirement {
-            background: #f7fafd;
-            padding: 18px;
+            background: #f2f6fa;
+            padding: 22px 18px;
             border-radius: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
             text-align: center;
-            border: 1px solid #e3eafc;
+            border: 1px solid #b0c4de;
             box-shadow: 0 4px 16px rgba(52, 105, 154, 0.06);
         }
 
         .requirement h3 {
             color: #34699a;
-            font-size: 1.1rem;
+            font-size: 1.13rem;
             margin-bottom: 8px;
         }
 
         .categories {
             display: grid;
-            gap: 36px;
-            margin-bottom: 40px;
+            gap: 38px;
+            margin-bottom: 44px;
         }
 
         .category {
-            border: 2px solid #e3eafc;
+            border: 2px solid #b0c4de;
             box-shadow: 0 4px 18px rgba(52, 105, 154, 0.07);
             border-radius: 18px;
-            background: #fff;
+            background: #f8fafc;
             transition: box-shadow 0.3s, border 0.3s;
-            padding: 26px 16px 22px 16px;
+            padding: 28px 18px 24px 18px;
         }
 
         .category:hover {
-            border: 2px solid #b7d0ea;
+            border: 2px solid #6b7fa3;
             box-shadow: 0 8px 28px rgba(52, 105, 154, 0.13);
         }
 
         .category h2 {
-            color: #34699a;
-            font-size: 1.2rem;
+            color: #2a3c5a;
+            font-size: 1.22rem;
             margin-bottom: 22px;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 700;
         }
 
         .category-icon {
             font-size: 1.5rem;
-            color: #7da6d9;
+            color: #6b7fa3;
         }
 
         .items-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 18px;
+            gap: 20px;
         }
 
         .item {
-            background: #f7fafd;
+            background: #f2f6fa;
             border-radius: 14px;
             box-shadow: 0 2px 12px rgba(52, 105, 154, 0.06);
-            padding: 20px 14px 16px 14px;
+            padding: 22px 14px 18px 14px;
             transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
-            border: 1.5px solid #e3eafc;
+            border: 1.5px solid #b0c4de;
             margin-bottom: 0;
             position: relative;
             overflow: hidden;
@@ -123,7 +149,7 @@
         .item:hover {
             box-shadow: 0 6px 20px rgba(52, 105, 154, 0.13);
             transform: translateY(-2px) scale(1.02);
-            border: 1.5px solid #7da6d9;
+            border: 1.5px solid #6b7fa3;
         }
 
         .item::before {
@@ -132,8 +158,8 @@
             inset: 0;
             border-radius: 12px;
             pointer-events: none;
-            border: 1.5px dashed #e3eafc;
-            opacity: 0.4;
+            border: 1.5px dashed #b0c4de;
+            opacity: 0.3;
             z-index: 0;
         }
 
@@ -278,31 +304,31 @@
 
         @media (max-width: 768px) {
             .container {
-                padding: 14px 4px 22px 4px;
+                padding: 18px 12px 28px 12px;
             }
             .category {
-                padding: 12px 4px 12px 4px;
+                padding: 16px 10px 16px 10px;
             }
             .items-grid {
                 grid-template-columns: 1fr;
-                gap: 14px;
+                gap: 18px;
             }
             .item {
-                padding: 14px 6px 12px 6px;
+                padding: 16px 10px 14px 10px;
             }
             .header h1 {
-                font-size: 1.3rem;
+                font-size: 1.6rem;
             }
             .category h2 {
-                font-size: 1rem;
-                margin-bottom: 12px;
+                font-size: 1.08rem;
+                margin-bottom: 16px;
             }
             .order-btn, .dm-btn {
-                font-size: 0.97rem;
-                padding: 10px 8px;
+                font-size: 1rem;
+                padding: 12px 10px;
             }
             .contact-section {
-                padding: 12px 4px;
+                padding: 16px 8px;
             }
         }
     </style>
@@ -312,6 +338,7 @@
         <div class="header">
             <h1>MLBB Gift</h1>
             <div class="subtitle">Harga terjangkau &middot; Proses cepat</div>
+            <div class="store-status open">🟢 OPEN</div>
             <div class="update-info">📅 Update: 28 Juli 2025</div>
         </div>
 
