@@ -241,10 +241,10 @@
   --color-info: var(--color-gray-300);
   --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
   --color-btn-primary-text: var(--color-slate-900);
-  --color-card-border: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
   --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
   --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
   --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
 
@@ -607,6 +607,28 @@ select.form-control {
     rgba(var(--color-info-rgb, 98, 108, 113), var(--status-border-opacity));
 }
 
+/* Store status styles */
+.store-status {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  letter-spacing: 0.01em;
+}
+.store-status.open {
+  background: rgba(var(--color-success-rgb), 0.12);
+  color: var(--color-success);
+  border: 1.5px solid var(--color-success);
+}
+.store-status.closed {
+  background: rgba(var(--color-error-rgb), 0.12);
+  color: var(--color-error);
+  border: 1.5px solid var(--color-error);
+}
+
 /* Container layout */
 .container {
   width: 100%;
@@ -867,29 +889,24 @@ body::before {
 }
 
 .store-status {
-  display: flex;
-  align-items: center;
-  gap: var(--space-8);
-  padding: var(--space-6) var(--space-12);
-  background: var(--color-bg-3);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  letter-spacing: 0.01em;
 }
-
-.status-indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-success);
-  animation: pulse 2s infinite;
+.store-status.open {
+  background: rgba(var(--color-success-rgb), 0.12);
+  color: var(--color-success);
+  border: 1.5px solid var(--color-success);
 }
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+.store-status.closed {
+  background: rgba(var(--color-error-rgb), 0.12);
+  color: var(--color-error);
+  border: 1.5px solid var(--color-error);
 }
 
 .header-actions {
