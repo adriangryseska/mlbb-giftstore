@@ -549,7 +549,7 @@ class MLBBGiftStore {
         // Only show premium badge if item is premium type
         const premiumBadge = item.type === 'premium' ? `
             <div class="product-type premium">
-                ✨ Premium
+                ✨ BEST SELLER
             </div>
         ` : '';
 
