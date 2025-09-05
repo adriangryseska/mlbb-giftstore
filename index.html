@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB Gift Store - Harga Terjangkau & Terpercaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="logo-icon">⚔️</div>
+                        <div class="logo-text">
+                            <h1>MLBB Gift</h1>
+                            <p>Harga terjangkau • Proses cepat • Terpercaya</p>
+                        </div>
+                    </div>
+                    <div class="store-status">
+                        <span class="status-indicator open"></span>
+                        <span class="status-text">Toko Buka</span>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Cari item..." class="search-input">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    
+                    <div class="header-controls">
+                        <button class="theme-toggle" id="themeToggle">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                        
+                        <button class="cart-btn" id="cartBtn">
+                            <span class="cart-icon">🛒</span>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">
+                    <span class="tab-icon">🎯</span>
+                    <span>Semua</span>
+                </button>
+                <button class="filter-tab" data-category="hero-skin">
+                    <span class="tab-icon">🎨</span>
+                    <span>Hero & Skin</span>
+                </button>
+                <button class="filter-tab" data-category="item-shop">
+                    <span class="tab-icon">🎁</span>
+                    <span>Item Shop</span>
+                </button>
+                <button class="filter-tab" data-category="charisma">
+                    <span class="tab-icon">💫</span>
+                    <span>Charisma</span>
+                </button>
+                <button class="filter-tab" data-category="live-stream">
+                    <span class="tab-icon">🎥</span>
+                    <span>Live Stream</span>
+                </button>
+                <button class="filter-tab" data-category="collaboration">
+                    <span class="tab-icon">🪞</span>
+                    <span>Kolaborasi</span>
+                </button>
+            </div>
+
+            <!-- Search Results Info -->
+            <div class="search-info" id="searchInfo" style="display: none;">
+                <p>Hasil pencarian untuk: <strong id="searchTerm"></strong></p>
+                <button class="clear-search" id="clearSearch">✕ Hapus pencarian</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">🔍</div>
+                <h3>Tidak ada item ditemukan</h3>
+                <p>Coba gunakan kata kunci yang berbeda atau pilih kategori lain</p>
+            </div>
+
+            <!-- Recently Viewed -->
+            <div class="recently-viewed" id="recentlyViewed" style="display: none;">
+                <h3>Baru Dilihat</h3>
+                <div class="recent-items" id="recentItems"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal hidden" id="cartModal">
+        <div class="modal-overlay" id="cartOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Keranjang Belanja</h3>
+                <button class="close-modal" id="closeCart">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items" id="cartItems"></div>
+                <div class="cart-empty" id="cartEmpty" style="display: none;">
+                    <div class="empty-icon">🛒</div>
+                    <p>Keranjang belanja kosong</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <strong>Total: <span id="cartTotal">Rp 0</span></strong>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn--secondary" id="clearCart">Hapus Semua</button>
+                    <button class="btn btn--primary" id="orderCart">Pesan via WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item Detail Modal -->
+    <div class="modal hidden" id="itemModal">
+        <div class="modal-overlay" id="itemOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="itemModalTitle">Detail Item</h3>
+                <button class="close-modal" id="closeItem">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="item-detail" id="itemDetail"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <button class="whatsapp-btn" id="floatingWhatsapp">
+            <span class="whatsapp-icon">💬</span>
+            <span class="whatsapp-text">Chat Admin</span>
+        </button>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>MLBB Gift Store</h4>
+                    <p>✅ Proses cepat & terpercaya</p>
+                    <p>⚡ Direct aman / rekber siap (ex)</p>
+                    <p>🔒 Transaksi 100% aman (legal)</p>
+                    <p>📦 Stock diamond sendiri (wajib tanya stock)</p>
+                </div>
+                <div class="footer-warning">
+                    <p><strong>⚠️ Penting:</strong> Stok dapat berubah sewaktu-waktu. Mohon selalu konfirmasi ketersediaan.</p>
+                    <p><strong>Syarat Gift:</strong> Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MLBB Gift Store. Last update: 5 September 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
