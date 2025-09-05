@@ -908,10 +908,10 @@ class MLBBGiftStore {
         const statusEl = document.getElementById('storeStatus');
         if (!statusEl) return;
         if (this.data.storeInfo.status === 'open') {
-            statusEl.textContent = '🟢 Toko Buka';
+            statusEl.textContent = '🟢 OPEN';
             statusEl.className = 'store-status open';
         } else {
-            statusEl.textContent = '🔴 Toko Tutup';
+            statusEl.textContent = '🔴 CLOSE';
             statusEl.className = 'store-status closed';
         }
     }
