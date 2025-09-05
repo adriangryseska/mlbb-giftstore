@@ -585,9 +585,6 @@ class MLBBGiftStore {
                 </div>
                 
                 <div class="product-actions">
-                    <button class="action-btn favorite-btn" data-item-id="${item.id}">
-                        ${isFavorite ? '❤️' : '🤍'} 
-                    </button>
                     <button class="action-btn add-cart-btn" data-item-id="${item.id}">
                         🛒 Tambah
                     </button>
