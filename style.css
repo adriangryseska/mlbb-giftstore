@@ -1064,7 +1064,7 @@ body::before {
 .filter-tab.active {
   color: white;
   border-color: var(--mlbb-primary);
-  transform: translateY(-2px);
+  transform: translateY(0px);
   box-shadow: var(--gaming-shadow);
 }
 
