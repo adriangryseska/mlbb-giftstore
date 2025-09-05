@@ -935,7 +935,14 @@ class MLBBGiftStore {
     }
 
     getItemById(itemId) {
-        return this.data.pricingConfig[itemId];
+        const item = this.data.pricingConfig[itemId];
+        if (!item) return undefined;
+        const category = this.data.categories.find(cat => cat.id === item.category);
+        return {
+            ...item,
+            categoryName: category ? category.name : '',
+            categoryIcon: category ? category.icon : ''
+        };
     }
 
     addToRecentlyViewed(item) {
