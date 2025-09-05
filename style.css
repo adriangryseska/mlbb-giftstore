@@ -637,6 +637,45 @@ select.form-control {
   }
 }
 
+.filter-tabs {
+  display: flex;
+  gap: var(--space-8);
+  margin: var(--space-24) 0;
+  overflow-x: auto;
+  padding-left: var(--space-8);
+  padding-right: var(--space-24); /* spasi kanan lebih */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  position: relative;
+}
+.filter-tabs::-webkit-scrollbar {
+  display: none;
+}
+.filter-tabs::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to left, var(--color-background), transparent);
+  z-index: 1;
+}
+
+.filter-tab {
+  min-width: 110px;
+  flex: 0 0 auto;
+  padding: var(--space-12) var(--space-16);
+}
+@media (max-width: 480px) {
+  .filter-tab {
+    min-width: 90px;
+    padding: var(--space-10) var(--space-12);
+    font-size: var(--font-size-sm);
+  }
+}
+
 /* Utility classes */
 .flex {
   display: flex;
