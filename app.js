@@ -917,11 +917,6 @@ class MLBBGiftStore {
     }
 
     // Helper methods for modal actions
-    toggleFavoriteAndUpdate(itemId) {
-        this.toggleFavorite(itemId);
-        this.closeItemModal();
-        this.renderProducts();
-    }
 
     addToCartAndClose(itemId) {
         this.addToCart(itemId);
