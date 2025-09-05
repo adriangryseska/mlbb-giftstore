@@ -663,19 +663,6 @@ select.form-control {
   z-index: 1;
 }
 
-.filter-tab {
-  min-width: 110px;
-  flex: 0 0 auto;
-  padding: var(--space-12) var(--space-16);
-}
-@media (max-width: 480px) {
-  .filter-tab {
-    min-width: 90px;
-    padding: var(--space-10) var(--space-12);
-    font-size: var(--font-size-sm);
-  }
-}
-
 /* Utility classes */
 .flex {
   display: flex;
@@ -1029,6 +1016,15 @@ body::before {
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+  min-width: 110px;
+  flex: 0 0 auto;
+}
+@media (max-width: 480px) {
+  .filter-tab {
+    min-width: 90px;
+    padding: var(--space-10) var(--space-12);
+    font-size: var(--font-size-sm);
+  }
 }
 
 .filter-tab::before {
