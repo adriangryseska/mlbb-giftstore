@@ -274,7 +274,7 @@ class MLBBGiftStore {
             storeInfo: {
                 name: "MLBB Gift",
                 subtitle: "Harga terjangkau • Proses cepat • Terpercaya",
-                status: "open",
+                status: "close",
                 lastUpdate: "5 September 2025",
                 whatsappNumber: "62895357381660",
                 requirements: "Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift."
@@ -312,6 +312,7 @@ class MLBBGiftStore {
         this.applyTheme();
         this.renderProducts();
         this.updateCartCount();
+        this.renderStoreStatus(); // Tambahkan baris ini
     }
 
     loadSavedState() {
@@ -907,6 +908,18 @@ class MLBBGiftStore {
         
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+    }
+
+    renderStoreStatus() {
+        const statusEl = document.getElementById('storeStatus');
+        if (!statusEl) return;
+        if (this.data.storeInfo.status === 'open') {
+            statusEl.textContent = '🟢 Toko Buka';
+            statusEl.className = 'store-status open';
+        } else {
+            statusEl.textContent = '🔴 Toko Tutup';
+            statusEl.className = 'store-status closed';
+        }
     }
 
     // Helper methods for modal actions
