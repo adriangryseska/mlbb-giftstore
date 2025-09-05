@@ -659,7 +659,6 @@ select.form-control {
   width: 36px;
   height: 100%;
   pointer-events: none;
-  background: linear-gradient(to left, var(--color-background), transparent);
   z-index: 1;
 }
 
@@ -967,7 +966,7 @@ body::before {
 
 .theme-toggle:hover, .cart-btn:hover {
   background: var(--color-secondary-hover);
-  transform: translateY(-1px);
+  transform: translateY(0px);
 }
 
 .cart-btn {
