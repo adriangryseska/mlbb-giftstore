@@ -890,9 +890,6 @@ class MLBBGiftStore {
                 </div>
                 
                 <div class="item-actions">
-                    <button class="btn btn--secondary" onclick="window.app.toggleFavoriteAndUpdate('${item.id}')">
-                        ${isFavorite ? '❤️ Hapus Favorit' : '🤍 Tambah Favorit'}
-                    </button>
                     <button class="btn btn--outline" onclick="window.app.addToCartAndClose('${item.id}')">
                         🛒 Tambah ke Keranjang
                     </button>
