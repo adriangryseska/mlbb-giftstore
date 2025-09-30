@@ -318,8 +318,7 @@ class MLBBGiftStore {
     loadSavedState() {
         this.state.isDarkMode = document.documentElement.getAttribute('data-color-scheme') === 'dark';
     }
-
-    bindEvents() {
+bindEvents() {
         // Theme toggle
         const themeToggle = document.getElementById('themeToggle');
         if (themeToggle) {
@@ -397,6 +396,36 @@ class MLBBGiftStore {
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => this.handleKeyboard(e));
+
+        // === EVENT DELEGATION UNTUK PRODUK ===
+        const grid = document.getElementById('productsGrid');
+        if (grid) {
+          grid.addEventListener('click', (e) => {
+            // Tombol Tambah ke Keranjang
+            const addBtn = e.target.closest('.add-cart-btn');
+            if (addBtn) {
+              const itemId = addBtn.getAttribute('data-item-id');
+              this.addToCart(itemId);
+              e.stopPropagation();
+              return;
+            }
+            // Tombol Pesan Sekarang
+            const orderBtn = e.target.closest('.order-btn');
+            if (orderBtn) {
+              const itemId = orderBtn.getAttribute('data-item-id');
+              this.orderSingleItem(itemId);
+              e.stopPropagation();
+              return;
+            }
+            // Klik di Card Produk (bukan tombol)
+            const card = e.target.closest('.product-card');
+            if (card && !e.target.closest('.product-actions')) {
+              const itemId = card.getAttribute('data-item-id');
+              this.showItemDetail(itemId);
+              return;
+            }
+          });
+        }
     }
 
     toggleTheme() {
