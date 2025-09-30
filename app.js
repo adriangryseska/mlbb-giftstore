@@ -131,7 +131,7 @@ const PRICING_CONFIG = {
     name: 'Starlight', 
     diamond: 300, 
     price: 32000, 
-    discount: 5,
+    discount: 6.25,
     type: 'premium',
     category: 'item-shop'
   },
@@ -140,7 +140,7 @@ const PRICING_CONFIG = {
     name: 'Premium Starlight', 
     diamond: 750, 
     price: 74000, 
-    discount: 10, 
+    discount: 12, 
     type: 'premium',
     category: 'item-shop'
   },
@@ -275,7 +275,7 @@ class MLBBGiftStore {
                 name: "MLBB Gift",
                 subtitle: "Harga terjangkau • Proses cepat • Terpercaya",
                 status: "open",
-                lastUpdate: "5 September 2025",
+                lastUpdate: "30 September 2025",
                 whatsappNumber: "62895357381660",
                 requirements: "Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift."
             },
@@ -550,7 +550,7 @@ class MLBBGiftStore {
         // Only show premium badge if item is premium type
         const premiumBadge = item.type === 'premium' ? `
             <div class="product-type premium">
-                ✨ BEST SELLER
+                ✨ RECOMMENDED
             </div>
         ` : '';
 
