@@ -312,7 +312,8 @@ class MLBBGiftStore {
         this.applyTheme();
         this.renderProducts();
         this.updateCartCount();
-        this.renderStoreStatus(); // Tambahkan baris ini
+        this.renderStoreStatus(); 
+        this.renderFooterLastUpdate;
     }
 
     loadSavedState() {
