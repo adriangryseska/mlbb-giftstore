@@ -130,8 +130,8 @@ const PRICING_CONFIG = {
     id: 'starlight-300',
     name: 'Starlight', 
     diamond: 300, 
-    price: 32000, 
-    discount: 6.25,
+    price: 33000, 
+    discount: 9.09,
     type: 'premium',
     category: 'item-shop'
   },
