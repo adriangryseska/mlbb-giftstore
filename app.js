@@ -269,6 +269,12 @@ const CATEGORIES = [
 
 // ===== MAIN APPLICATION =====
 class MLBBGiftStore {
+    renderFooterLastUpdate() {
+    const lastUpdateEl = document.getElementById('lastUpdateFooter');
+    if (lastUpdateEl) {
+        lastUpdateEl.textContent = `Last update: ${this.data.storeInfo.lastUpdate}`;
+    }
+}
     constructor() {
         this.data = {
             storeInfo: {
@@ -313,7 +319,7 @@ class MLBBGiftStore {
         this.renderProducts();
         this.updateCartCount();
         this.renderStoreStatus(); 
-        this.renderFooterLastUpdate;
+        this.renderFooterLastUpdate();
     }
 
     loadSavedState() {
