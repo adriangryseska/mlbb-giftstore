@@ -5,7 +5,7 @@ const PRICING_CONFIG = {
     name: 'Skin Basic', 
     diamond: 269, 
     price: 26900, 
-    discount: 0, // percentage discount
+    discount: 10, // percentage discount
     type: 'normal',
     category: 'hero-skin'
   },
@@ -23,7 +23,7 @@ const PRICING_CONFIG = {
     name: 'Skin Elite', 
     diamond: 399, 
     price: 39900, 
-    discount: 0,
+    discount: 10,
     type: 'normal',
     category: 'hero-skin'
   },
@@ -32,7 +32,7 @@ const PRICING_CONFIG = {
     name: 'Skin Elite', 
     diamond: 599, 
     price: 61900, 
-    discount: 5, 
+    discount: 10, 
     type: 'normal',
     category: 'hero-skin'
   },
@@ -41,7 +41,7 @@ const PRICING_CONFIG = {
     name: 'Hero', 
     diamond: 599, 
     price: 61900, 
-    discount: 0,
+    discount: 10,
     type: 'normal',
     category: 'hero-skin'
   },
@@ -50,7 +50,7 @@ const PRICING_CONFIG = {
     name: 'Skin Special', 
     diamond: 749, 
     price: 81000, 
-    discount: 5,
+    discount: 10,
     type: 'normal',
     category: 'hero-skin'
   },
@@ -59,7 +59,7 @@ const PRICING_CONFIG = {
     name: 'Skin Epic', 
     diamond: 899, 
     price: 100000, 
-    discount: 5, 
+    discount: 10, 
     type: 'premium',
     category: 'hero-skin'
   },
@@ -104,7 +104,7 @@ const PRICING_CONFIG = {
     name: 'Squad Rename Card', 
     diamond: 299, 
     price: 30000, 
-    discount: 5,
+    discount: 10,
     type: 'normal',
     category: 'item-shop'
   },
@@ -122,7 +122,7 @@ const PRICING_CONFIG = {
     name: 'Creation Camp', 
     diamond: 50, 
     price: 6000, 
-    discount: 5,
+    discount: 10,
     type: 'normal',
     category: 'item-shop'
   },
@@ -130,8 +130,8 @@ const PRICING_CONFIG = {
     id: 'starlight-300',
     name: 'Starlight', 
     diamond: 300, 
-    price: 33000, 
-    discount: 9.09,
+    price: 35000, 
+    discount: 14,
     type: 'premium',
     category: 'item-shop'
   },
@@ -140,7 +140,7 @@ const PRICING_CONFIG = {
     name: 'Premium Starlight', 
     diamond: 750, 
     price: 74000, 
-    discount: 12, 
+    discount: 15, 
     type: 'premium',
     category: 'item-shop'
   },
@@ -167,7 +167,7 @@ const PRICING_CONFIG = {
     name: 'Angel Ark', 
     diamond: 499, 
     price: 44000, 
-    discount: 5,
+    discount: 10,
     type: 'normal',
     category: 'charisma'
   },
@@ -185,7 +185,7 @@ const PRICING_CONFIG = {
     name: 'Goldmoon Lantern', 
     diamond: 999, 
     price: 85000, 
-    discount: 5, 
+    discount: 10, 
     type: 'premium',
     category: 'charisma'
   },
@@ -230,7 +230,7 @@ const PRICING_CONFIG = {
     name: 'Airplane', 
     diamond: 5000, 
     price: 490000, 
-    discount: 40, 
+    discount: 50, 
     type: 'premium',
     category: 'live-stream'
   }
@@ -275,7 +275,7 @@ class MLBBGiftStore {
                 name: "MLBB Gift",
                 subtitle: "Harga terjangkau • Proses cepat • Terpercaya",
                 status: "open",
-                lastUpdate: "30 September 2025",
+                lastUpdate: "16 Oktober 2025",
                 whatsappNumber: "62895357381660",
                 requirements: "Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift."
             },
