@@ -129,7 +129,7 @@ const PRICING_CONFIG = {
   },
   'starlight-300': { 
     id: 'starlight-300',
-    name: 'Starlight (slot habis)', 
+    name: 'Starlight', 
     diamond: 300, 
     price: 30000, 
     discount: 0,
