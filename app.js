@@ -96,7 +96,7 @@ const PRICING_CONFIG = {
     name: 'Rename Card', 
     diamond: 239, 
     price: 23900, 
-    discount: 20,
+    discount: 0,
     type: 'normal',
     category: 'item-shop'
   },
@@ -105,7 +105,7 @@ const PRICING_CONFIG = {
     name: 'Squad Rename Card', 
     diamond: 299, 
     price: 29900, 
-    discount: 20,
+    discount: 0,
     type: 'normal',
     category: 'item-shop'
   },
@@ -114,7 +114,7 @@ const PRICING_CONFIG = {
     name: 'Flag Change Card', 
     diamond: 300, 
     price: 30000, 
-    discount: 20,
+    discount: 0,
     type: 'normal',
     category: 'item-shop'
   },
@@ -123,7 +123,7 @@ const PRICING_CONFIG = {
     name: 'Creation Camp', 
     diamond: 50, 
     price: 5000, 
-    discount: 30,
+    discount: 0,
     type: 'normal',
     category: 'item-shop'
   },
@@ -176,7 +176,7 @@ const PRICING_CONFIG = {
     id: 'paradise-island-499',
     name: 'Paradise Island', 
     diamond: 499, 
-    price: 44000, 
+    price: 49900, 
     discount: 20,
     type: 'normal',
     category: 'charisma'
@@ -185,7 +185,7 @@ const PRICING_CONFIG = {
     id: 'goldmoon-lantern-999',
     name: 'Goldmoon Lantern', 
     diamond: 999, 
-    price: 85000, 
+    price: 99900, 
     discount: 30, 
     type: 'premium',
     category: 'charisma'
@@ -194,8 +194,8 @@ const PRICING_CONFIG = {
     id: 'flower-2',
     name: 'Flower', 
     diamond: 2, 
-    price: 240, 
-    discount: 20,
+    price: 200, 
+    discount: 0,
     type: 'normal',
     category: 'live-stream'
   },
@@ -204,7 +204,7 @@ const PRICING_CONFIG = {
     name: 'Jewelry', 
     diamond: 6, 
     price: 600, 
-    discount: 20,
+    discount: 0,
     type: 'normal',
     category: 'live-stream'
   },
