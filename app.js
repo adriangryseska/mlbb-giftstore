@@ -60,7 +60,7 @@ const PRICING_CONFIG = {
     diamond: 899, 
     price: 89900, 
     discount: 0, 
-    type: 'premium',
+    type: 'recommended,
     category: 'hero-skin'
   },
   'skin-lightborn-1089': { 
@@ -69,7 +69,7 @@ const PRICING_CONFIG = {
     diamond: 1089, 
     price: 108900, 
     discount: 0,
-    type: 'premium',
+    type: 'recommended',
     category: 'hero-skin'
   },
   'emote-79': { 
@@ -132,7 +132,7 @@ const PRICING_CONFIG = {
     diamond: 300, 
     price: 30000, 
     discount: 0,
-    type: 'premium',
+    type: 'recommended',
     category: 'item-shop'
   },
   'premium-starlight-750': { 
@@ -141,7 +141,7 @@ const PRICING_CONFIG = {
     diamond: 750, 
     price: 75000, 
     discount: 20, 
-    type: 'premium',
+    type: 'recommended',
     category: 'item-shop'
   },
   'charisma-8': { 
@@ -186,7 +186,7 @@ const PRICING_CONFIG = {
     diamond: 999, 
     price: 85000, 
     discount: 30, 
-    type: 'premium',
+    type: 'recommended',
     category: 'charisma'
   },
   'flower-2': { 
@@ -222,7 +222,7 @@ const PRICING_CONFIG = {
     diamond: 1000, 
     price: 100000, 
     discount: 20,
-    type: 'premium',
+    type: 'normal',
     category: 'live-stream'
   },
   'airplane-5000': { 
@@ -231,7 +231,7 @@ const PRICING_CONFIG = {
     diamond: 5000, 
     price: 500000, 
     discount: 50, 
-    type: 'premium',
+    type: 'recommended',
     category: 'live-stream'
   }
 };
@@ -584,8 +584,8 @@ bindEvents() {
         const isFavorite = this.state.favorites.includes(item.id);
 
         // Only show premium badge if item is premium type
-        const premiumBadge = item.type === 'premium' ? `
-            <div class="product-type premium">
+        const premiumBadge = item.type === 'recommended`
+            <div class="product-type recommended">
                 ✨ RECOMMENDED
             </div>
         ` : '';
