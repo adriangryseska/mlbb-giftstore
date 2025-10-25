@@ -837,8 +837,8 @@ bindEvents() {
     }
 
     createWhatsAppMessage(items) {
-        let message = `🎮 *MLBB GIFT ORDER*\n\n`;
-        message += `📋 *Detail Pesanan:*\n`;
+        let message = `*MLBB GIFT ORDER*\n\n`;
+        message += `*Detail Pesanan:*\n`;
         
         let totalRupiah = 0;
         
@@ -856,12 +856,12 @@ bindEvents() {
             totalRupiah += itemTotal;
         });
         
-        message += `💰 *Total Pembayaran: Rp ${totalRupiah.toLocaleString()}*\n\n`;
+        message += `*Total Pembayaran: Rp ${totalRupiah.toLocaleString()}*\n\n`;
         
-        message += `📝 *Catatan:*\n`;
+        message += `*Catatan:*\n`;
         message += `${this.data.storeInfo.requirements}\n\n`;
         message += `Mohon konfirmasi ketersediaan stock terlebih dahulu.\n`;
-        message += `Terima kasih! 🙏`;
+        message += `Terima kasih!`;
         
         return message;
     }
@@ -873,7 +873,7 @@ bindEvents() {
     }
 
     contactAdmin() {
-        const message = `Halo admin MLBB Gift Store! 👋\n\nSaya ingin bertanya tentang produk/layanan Anda.\n\nTerima kasih!`;
+        const message = `Halo! \n\nSaya ingin bertanya tentang produk/stock yang tersedia.\n\nTerima kasih!`;
         this.sendWhatsAppMessage(message);
     }
 
@@ -1064,6 +1064,64 @@ bindEvents() {
         }
     }
 }
+
+// Debounce search
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Optimize search
+const debouncedSearch = debounce((term) => {
+  this.handleSearch(term);
+}, 400);
+
+searchInput.addEventListener('input', (e) => {
+  debouncedSearch(e.target.value);
+});
+
+// RAF Throttle for animations
+function rafThrottle(callback) {
+  let requestId = null;
+  
+  return (...args) => {
+    if (requestId) return;
+    
+    requestId = requestAnimationFrame(() => {
+      callback.apply(this, args);
+      requestId = null;
+    });
+  };
+}
+
+// Passive scroll listeners
+document.addEventListener('scroll', rafThrottle(() => {
+  // Scroll handling code
+}), {passive: true});
+
+// Touch optimization
+const touchHandler = {
+  handleStart(e) {
+    // Touch start logic
+  },
+  handleMove(e) {
+    // Touch move logic with RAF
+  },
+  handleEnd(e) {
+    // Touch end logic
+  }
+};
+
+document.addEventListener('touchstart', touchHandler.handleStart, {passive: true});
+document.addEventListener('touchmove', touchHandler.handleMove, {passive: true}); 
+document.addEventListener('touchend', touchHandler.handleEnd);
 
 // Initialize the application and make it globally available
 window.app = new MLBBGiftStore();
