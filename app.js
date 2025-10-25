@@ -584,7 +584,7 @@ bindEvents() {
         const isFavorite = this.state.favorites.includes(item.id);
 
         // Only show premium badge if item is premium type
-        const premiumBadge = item.type === 'recommended`
+        const premiumBadge = item.type === 'recommended' ?`
             <div class="product-type recommended">
                 ✨ RECOMMENDED
             </div>
