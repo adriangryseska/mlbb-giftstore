@@ -60,7 +60,7 @@ const PRICING_CONFIG = {
     diamond: 899, 
     price: 89900, 
     discount: 0, 
-    type: 'recommended,
+    type: 'premium',
     category: 'hero-skin'
   },
   'skin-lightborn-1089': { 
@@ -69,7 +69,7 @@ const PRICING_CONFIG = {
     diamond: 1089, 
     price: 108900, 
     discount: 0,
-    type: 'recommended',
+    type: 'premium',
     category: 'hero-skin'
   },
   'emote-79': { 
@@ -86,7 +86,7 @@ const PRICING_CONFIG = {
     name: 'Emote', 
     diamond: 109, 
     price: 10900, 
-    discount: 0,
+    discount: 10,
     type: 'normal',
     category: 'item-shop'
   },
@@ -95,7 +95,7 @@ const PRICING_CONFIG = {
     name: 'Rename Card', 
     diamond: 239, 
     price: 23900, 
-    discount: 20,
+    discount: 10,
     type: 'normal',
     category: 'item-shop'
   },
@@ -104,7 +104,7 @@ const PRICING_CONFIG = {
     name: 'Squad Rename Card', 
     diamond: 299, 
     price: 29900, 
-    discount: 20,
+    discount: 10,
     type: 'normal',
     category: 'item-shop'
   },
@@ -113,7 +113,7 @@ const PRICING_CONFIG = {
     name: 'Flag Change Card', 
     diamond: 300, 
     price: 30000, 
-    discount: 20,
+    discount: 10,
     type: 'normal',
     category: 'item-shop'
   },
@@ -122,17 +122,17 @@ const PRICING_CONFIG = {
     name: 'Creation Camp', 
     diamond: 50, 
     price: 5000, 
-    discount: 30,
+    discount: 10,
     type: 'normal',
     category: 'item-shop'
   },
   'starlight-300': { 
     id: 'starlight-300',
-    name: 'Starlight (slot habis)', 
+    name: 'Starlight', 
     diamond: 300, 
     price: 30000, 
     discount: 0,
-    type: 'recommended',
+    type: 'premium',
     category: 'item-shop'
   },
   'premium-starlight-750': { 
@@ -141,7 +141,7 @@ const PRICING_CONFIG = {
     diamond: 750, 
     price: 75000, 
     discount: 20, 
-    type: 'recommended',
+    type: 'premium',
     category: 'item-shop'
   },
   'charisma-8': { 
@@ -167,7 +167,7 @@ const PRICING_CONFIG = {
     name: 'Angel Ark', 
     diamond: 499, 
     price: 49900, 
-    discount: 20,
+    discount: 30,
     type: 'normal',
     category: 'charisma'
   },
@@ -175,8 +175,8 @@ const PRICING_CONFIG = {
     id: 'paradise-island-499',
     name: 'Paradise Island', 
     diamond: 499, 
-    price: 44000, 
-    discount: 20,
+    price: 49900, 
+    discount: 30,
     type: 'normal',
     category: 'charisma'
   },
@@ -184,17 +184,17 @@ const PRICING_CONFIG = {
     id: 'goldmoon-lantern-999',
     name: 'Goldmoon Lantern', 
     diamond: 999, 
-    price: 85000, 
+    price: 99900, 
     discount: 30, 
-    type: 'recommended',
+    type: 'premium',
     category: 'charisma'
   },
   'flower-2': { 
     id: 'flower-2',
     name: 'Flower', 
     diamond: 2, 
-    price: 240, 
-    discount: 20,
+    price: 200, 
+    discount: 50,
     type: 'normal',
     category: 'live-stream'
   },
@@ -203,7 +203,7 @@ const PRICING_CONFIG = {
     name: 'Jewelry', 
     diamond: 6, 
     price: 600, 
-    discount: 20,
+    discount: 50,
     type: 'normal',
     category: 'live-stream'
   },
@@ -212,7 +212,7 @@ const PRICING_CONFIG = {
     name: 'Roadster', 
     diamond: 250, 
     price: 25000, 
-    discount: 20,
+    discount: 10,
     type: 'normal',
     category: 'live-stream'
   },
@@ -222,7 +222,7 @@ const PRICING_CONFIG = {
     diamond: 1000, 
     price: 100000, 
     discount: 20,
-    type: 'normal',
+    type: 'premium',
     category: 'live-stream'
   },
   'airplane-5000': { 
@@ -231,7 +231,7 @@ const PRICING_CONFIG = {
     diamond: 5000, 
     price: 500000, 
     discount: 50, 
-    type: 'recommended',
+    type: 'premium',
     category: 'live-stream'
   }
 };
@@ -260,10 +260,10 @@ const CATEGORIES = [
   },
   {
     id: "collaboration",
-    name: "Gift Skin Event/Kolaborasi (Giftable",
+    name: "Gift Skin Event/Kolaborasi",
     icon: "🪞",
     special: true,
-    message: "Silakan chat admin untuk info ketersediaan skin event/kolaborasi terbaru (harga gift awal event dan akhir event bisa saja berbeda)."
+    message: "Silakan chat admin untuk info ketersediaan dan harga skin kolaborasi terbaru (harga gift awal event dan akhir event akan berbeda)."
   }
 ];
 
@@ -281,7 +281,7 @@ class MLBBGiftStore {
                 name: "MLBB Gift",
                 subtitle: "Harga terjangkau • Proses cepat • Terpercaya",
                 status: "open",
-                lastUpdate: "25 Oktober 2025",
+                lastUpdate: "16 Oktober 2025",
                 whatsappNumber: "62895357381660",
                 requirements: "Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift."
             },
@@ -584,8 +584,8 @@ bindEvents() {
         const isFavorite = this.state.favorites.includes(item.id);
 
         // Only show premium badge if item is premium type
-        const premiumBadge = item.type === 'recommended' ?`
-            <div class="product-type recommended">
+        const premiumBadge = item.type === 'premium' ? `
+            <div class="product-type premium">
                 ✨ RECOMMENDED
             </div>
         ` : '';
@@ -903,7 +903,7 @@ bindEvents() {
                 
                 <div class="item-info">
                     <h3>${item.name}</h3>
-                    ${item.type === 'premium' ? '<div class="item-type premium">✨ Premium</div>' : ''}
+                    ${item.type === 'premium' ? '<div class="item-type premium">✨ RECOMMENDED</div>' : ''}
                 </div>
                 
                 <div class="item-pricing">
