@@ -904,7 +904,7 @@ bindEvents() {
                 
                 <div class="item-info">
                     <h3>${item.name}</h3>
-                    ${item.type === 'premium' ? '<div class="item-type premium">✨ Premium</div>' : ''}
+                    ${item.type === 'premium' ? '<div class="item-type premium">✨ RECOMMENDED</div>' : ''}
                 </div>
                 
                 <div class="item-pricing">
