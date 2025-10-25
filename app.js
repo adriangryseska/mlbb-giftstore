@@ -5,7 +5,7 @@ const PRICING_CONFIG = {
     name: 'Skin Basic', 
     diamond: 269, 
     price: 26900, 
-    discount: 20, // percentage discount
+    discount: 0, // percentage discount
     type: 'normal',
     category: 'hero-skin'
   },
@@ -14,7 +14,7 @@ const PRICING_CONFIG = {
     name: 'Skin Basic', 
     diamond: 299, 
     price: 29900, 
-    discount: 20, 
+    discount: 0, 
     type: 'normal',
     category: 'hero-skin'
   },
@@ -23,7 +23,7 @@ const PRICING_CONFIG = {
     name: 'Skin Elite', 
     diamond: 399, 
     price: 39900, 
-    discount: 20,
+    discount: 0,
     type: 'normal',
     category: 'hero-skin'
   },
@@ -31,8 +31,8 @@ const PRICING_CONFIG = {
     id: 'skin-elite-599',
     name: 'Skin Elite', 
     diamond: 599, 
-    price: 61900, 
-    discount: 20, 
+    price: 59900, 
+    discount: 0, 
     type: 'normal',
     category: 'hero-skin'
   },
@@ -40,8 +40,8 @@ const PRICING_CONFIG = {
     id: 'hero-599',
     name: 'Hero', 
     diamond: 599, 
-    price: 61900, 
-    discount: 20,
+    price: 59900, 
+    discount: 0,
     type: 'normal',
     category: 'hero-skin'
   },
@@ -49,8 +49,8 @@ const PRICING_CONFIG = {
     id: 'skin-special-749',
     name: 'Skin Special', 
     diamond: 749, 
-    price: 81000, 
-    discount: 20,
+    price: 74900, 
+    discount: 0,
     type: 'normal',
     category: 'hero-skin'
   },
@@ -58,8 +58,8 @@ const PRICING_CONFIG = {
     id: 'skin-epic-899',
     name: 'Skin Epic', 
     diamond: 899, 
-    price: 100000, 
-    discount: 20, 
+    price: 89900, 
+    discount: 0, 
     type: 'premium',
     category: 'hero-skin'
   },
@@ -67,8 +67,8 @@ const PRICING_CONFIG = {
     id: 'skin-lightborn-1089',
     name: 'Skin Lightborn', 
     diamond: 1089, 
-    price: 125000, 
-    discount: 20,
+    price: 108900, 
+    discount: 0,
     type: 'premium',
     category: 'hero-skin'
   },
@@ -76,7 +76,7 @@ const PRICING_CONFIG = {
     id: 'emote-79',
     name: 'Emote', 
     diamond: 79, 
-    price: 7500, 
+    price: 7900, 
     discount: 10,
     type: 'normal',
     category: 'item-shop'
@@ -85,8 +85,8 @@ const PRICING_CONFIG = {
     id: 'emote-109',
     name: 'Emote', 
     diamond: 109, 
-    price: 12000, 
-    discount: 10,
+    price: 10900, 
+    discount: 0,
     type: 'normal',
     category: 'item-shop'
   },
@@ -94,7 +94,7 @@ const PRICING_CONFIG = {
     id: 'rename-card-239',
     name: 'Rename Card', 
     diamond: 239, 
-    price: 24000, 
+    price: 23900, 
     discount: 20,
     type: 'normal',
     category: 'item-shop'
@@ -103,7 +103,7 @@ const PRICING_CONFIG = {
     id: 'squad-rename-299',
     name: 'Squad Rename Card', 
     diamond: 299, 
-    price: 30000, 
+    price: 29900, 
     discount: 20,
     type: 'normal',
     category: 'item-shop'
@@ -112,7 +112,7 @@ const PRICING_CONFIG = {
     id: 'flag-change-300',
     name: 'Flag Change Card', 
     diamond: 300, 
-    price: 32000, 
+    price: 30000, 
     discount: 20,
     type: 'normal',
     category: 'item-shop'
@@ -121,17 +121,17 @@ const PRICING_CONFIG = {
     id: 'creation-camp-50',
     name: 'Creation Camp', 
     diamond: 50, 
-    price: 6000, 
+    price: 5000, 
     discount: 30,
     type: 'normal',
     category: 'item-shop'
   },
   'starlight-300': { 
     id: 'starlight-300',
-    name: 'Starlight', 
+    name: 'Starlight (slot habis)', 
     diamond: 300, 
-    price: 33000, 
-    discount: 10,
+    price: 30000, 
+    discount: 0,
     type: 'premium',
     category: 'item-shop'
   },
@@ -139,7 +139,7 @@ const PRICING_CONFIG = {
     id: 'premium-starlight-750',
     name: 'Premium Starlight', 
     diamond: 750, 
-    price: 74000, 
+    price: 75000, 
     discount: 20, 
     type: 'premium',
     category: 'item-shop'
@@ -148,7 +148,7 @@ const PRICING_CONFIG = {
     id: 'charisma-8',
     name: 'Charisma', 
     diamond: 8, 
-    price: 300, 
+    price: 800, 
     discount: 50,
     type: 'normal',
     category: 'charisma'
@@ -157,7 +157,7 @@ const PRICING_CONFIG = {
     id: 'charisma-20',
     name: 'Charisma', 
     diamond: 20, 
-    price: 800, 
+    price: 2000, 
     discount: 50,
     type: 'normal',
     category: 'charisma'
@@ -166,7 +166,7 @@ const PRICING_CONFIG = {
     id: 'angel-ark-499',
     name: 'Angel Ark', 
     diamond: 499, 
-    price: 44000, 
+    price: 49900, 
     discount: 20,
     type: 'normal',
     category: 'charisma'
@@ -185,7 +185,7 @@ const PRICING_CONFIG = {
     name: 'Goldmoon Lantern', 
     diamond: 999, 
     price: 85000, 
-    discount: 20, 
+    discount: 30, 
     type: 'premium',
     category: 'charisma'
   },
@@ -202,7 +202,7 @@ const PRICING_CONFIG = {
     id: 'jewelry-6',
     name: 'Jewelry', 
     diamond: 6, 
-    price: 710, 
+    price: 600, 
     discount: 20,
     type: 'normal',
     category: 'live-stream'
@@ -211,7 +211,7 @@ const PRICING_CONFIG = {
     id: 'roadster-250',
     name: 'Roadster', 
     diamond: 250, 
-    price: 28000, 
+    price: 25000, 
     discount: 20,
     type: 'normal',
     category: 'live-stream'
@@ -220,7 +220,7 @@ const PRICING_CONFIG = {
     id: 'yacht-1000',
     name: 'Yacht', 
     diamond: 1000, 
-    price: 105000, 
+    price: 100000, 
     discount: 20,
     type: 'premium',
     category: 'live-stream'
@@ -229,7 +229,7 @@ const PRICING_CONFIG = {
     id: 'airplane-5000',
     name: 'Airplane', 
     diamond: 5000, 
-    price: 490000, 
+    price: 500000, 
     discount: 50, 
     type: 'premium',
     category: 'live-stream'
@@ -250,20 +250,20 @@ const CATEGORIES = [
   },
   {
     id: "charisma",
-    name: "Gift Charisma",
+    name: "Gift Charisma (Profil Estetika)",
     icon: "💫"
   },
   {
     id: "live-stream",
-    name: "Gift Live Stream",
+    name: "Gift Live Stream (Per-item worth 1 diamond akan mendapatkan 1 BB coin. Tiap 5 BB Coin dapat ditukarkan menjadi 1 Diamond)",
     icon: "🎥"
   },
   {
     id: "collaboration",
-    name: "Gift Skin Kolaborasi",
+    name: "Gift Skin Event/Kolaborasi (Giftable",
     icon: "🪞",
     special: true,
-    message: "Silakan chat admin untuk info ketersediaan dan harga skin kolaborasi terbaru (harga gift awal event dan akhir event akan berbeda)."
+    message: "Silakan chat admin untuk info ketersediaan skin event/kolaborasi terbaru (harga gift awal event dan akhir event bisa saja berbeda)."
   }
 ];
 
