@@ -1,3 +1,4 @@
+
 // ===== PRICING CONFIG - EDIT DISINI UNTUK UPDATE HARGA =====
 const PRICING_CONFIG = {
   'skin-basic-269': { 
@@ -86,7 +87,7 @@ const PRICING_CONFIG = {
     name: 'Emote', 
     diamond: 109, 
     price: 10900, 
-    discount: 10,
+    discount: 0,
     type: 'normal',
     category: 'item-shop'
   },
@@ -95,7 +96,7 @@ const PRICING_CONFIG = {
     name: 'Rename Card', 
     diamond: 239, 
     price: 23900, 
-    discount: 10,
+    discount: 20,
     type: 'normal',
     category: 'item-shop'
   },
@@ -104,7 +105,7 @@ const PRICING_CONFIG = {
     name: 'Squad Rename Card', 
     diamond: 299, 
     price: 29900, 
-    discount: 10,
+    discount: 20,
     type: 'normal',
     category: 'item-shop'
   },
@@ -113,7 +114,7 @@ const PRICING_CONFIG = {
     name: 'Flag Change Card', 
     diamond: 300, 
     price: 30000, 
-    discount: 10,
+    discount: 20,
     type: 'normal',
     category: 'item-shop'
   },
@@ -122,13 +123,13 @@ const PRICING_CONFIG = {
     name: 'Creation Camp', 
     diamond: 50, 
     price: 5000, 
-    discount: 10,
+    discount: 30,
     type: 'normal',
     category: 'item-shop'
   },
   'starlight-300': { 
     id: 'starlight-300',
-    name: 'Starlight', 
+    name: 'Starlight (slot habis)', 
     diamond: 300, 
     price: 30000, 
     discount: 0,
@@ -167,7 +168,7 @@ const PRICING_CONFIG = {
     name: 'Angel Ark', 
     diamond: 499, 
     price: 49900, 
-    discount: 30,
+    discount: 20,
     type: 'normal',
     category: 'charisma'
   },
@@ -175,8 +176,8 @@ const PRICING_CONFIG = {
     id: 'paradise-island-499',
     name: 'Paradise Island', 
     diamond: 499, 
-    price: 49900, 
-    discount: 30,
+    price: 44000, 
+    discount: 20,
     type: 'normal',
     category: 'charisma'
   },
@@ -184,7 +185,7 @@ const PRICING_CONFIG = {
     id: 'goldmoon-lantern-999',
     name: 'Goldmoon Lantern', 
     diamond: 999, 
-    price: 99900, 
+    price: 85000, 
     discount: 30, 
     type: 'premium',
     category: 'charisma'
@@ -193,8 +194,8 @@ const PRICING_CONFIG = {
     id: 'flower-2',
     name: 'Flower', 
     diamond: 2, 
-    price: 200, 
-    discount: 50,
+    price: 240, 
+    discount: 20,
     type: 'normal',
     category: 'live-stream'
   },
@@ -203,7 +204,7 @@ const PRICING_CONFIG = {
     name: 'Jewelry', 
     diamond: 6, 
     price: 600, 
-    discount: 50,
+    discount: 20,
     type: 'normal',
     category: 'live-stream'
   },
@@ -212,7 +213,7 @@ const PRICING_CONFIG = {
     name: 'Roadster', 
     diamond: 250, 
     price: 25000, 
-    discount: 10,
+    discount: 20,
     type: 'normal',
     category: 'live-stream'
   },
@@ -260,10 +261,10 @@ const CATEGORIES = [
   },
   {
     id: "collaboration",
-    name: "Gift Skin Event/Kolaborasi",
+    name: "Gift Skin Event/Kolaborasi (Giftable",
     icon: "🪞",
     special: true,
-    message: "Silakan chat admin untuk info ketersediaan dan harga skin kolaborasi terbaru (harga gift awal event dan akhir event akan berbeda)."
+    message: "Silakan chat admin untuk info ketersediaan skin event/kolaborasi terbaru (harga gift awal event dan akhir event bisa saja berbeda)."
   }
 ];
 
@@ -903,7 +904,7 @@ bindEvents() {
                 
                 <div class="item-info">
                     <h3>${item.name}</h3>
-                    ${item.type === 'premium' ? '<div class="item-type premium">✨ RECOMMENDED</div>' : ''}
+                    ${item.type === 'premium' ? '<div class="item-type premium">✨ Premium</div>' : ''}
                 </div>
                 
                 <div class="item-pricing">
