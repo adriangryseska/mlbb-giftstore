@@ -250,12 +250,12 @@ const CATEGORIES = [
   },
   {
     id: "charisma",
-    name: "Gift Charisma (Profil Estetika)",
+    name: "Gift Charisma",
     icon: "💫"
   },
   {
     id: "live-stream",
-    name: "Gift Live Stream (Per-item worth 1 diamond akan mendapatkan 1 BB coin. Tiap 5 BB Coin dapat ditukarkan menjadi 1 Diamond)",
+    name: "Gift Live Stream",
     icon: "🎥"
   },
   {
