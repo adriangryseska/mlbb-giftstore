@@ -1,12 +1,14 @@
 
 // ===== PRICING CONFIG - EDIT DISINI UNTUK UPDATE HARGA =====
+
 const PRICING_CONFIG = {
+  // ===== HERO SKIN (RATE NAIK SESUAI NOMINAL: KECIL 1:90, BESAR 1:120+) =====
   'skin-basic-269': { 
     id: 'skin-basic-269',
     name: 'Skin Basic', 
     diamond: 269, 
-    price: 26900, 
-    discount: 0, // percentage discount
+    price: 28900,
+    discount: 10,      
     type: 'normal',
     category: 'hero-skin'
   },
@@ -14,8 +16,8 @@ const PRICING_CONFIG = {
     id: 'skin-basic-299',
     name: 'Skin Basic', 
     diamond: 299, 
-    price: 29900, 
-    discount: 0, 
+    price: 31900,
+    discount: 10, 
     type: 'normal',
     category: 'hero-skin'
   },
@@ -23,8 +25,8 @@ const PRICING_CONFIG = {
     id: 'skin-elite-399',
     name: 'Skin Elite', 
     diamond: 399, 
-    price: 39900, 
-    discount: 0,
+    price: 42900,      
+    discount: 5,
     type: 'normal',
     category: 'hero-skin'
   },
@@ -32,8 +34,8 @@ const PRICING_CONFIG = {
     id: 'skin-elite-599',
     name: 'Skin Elite', 
     diamond: 599, 
-    price: 59900, 
-    discount: 0, 
+    price: 65900,      
+    discount: 5,
     type: 'normal',
     category: 'hero-skin'
   },
@@ -41,8 +43,8 @@ const PRICING_CONFIG = {
     id: 'hero-599',
     name: 'Hero', 
     diamond: 599, 
-    price: 59900, 
-    discount: 0,
+    price: 65900,
+    discount: 5,
     type: 'normal',
     category: 'hero-skin'
   },
@@ -50,8 +52,8 @@ const PRICING_CONFIG = {
     id: 'skin-special-749',
     name: 'Skin Special', 
     diamond: 749, 
-    price: 74900, 
-    discount: 0,
+    price: 85900,      
+    discount: 10,      
     type: 'normal',
     category: 'hero-skin'
   },
@@ -59,8 +61,8 @@ const PRICING_CONFIG = {
     id: 'skin-epic-899',
     name: 'Skin Epic', 
     diamond: 899, 
-    price: 89900, 
-    discount: 0, 
+    price: 104900,     
+    discount: 10,      
     type: 'premium',
     category: 'hero-skin'
   },
@@ -68,17 +70,19 @@ const PRICING_CONFIG = {
     id: 'skin-lightborn-1089',
     name: 'Skin Lightborn / P.Ace', 
     diamond: 1089, 
-    price: 108900, 
-    discount: 0,
+    price: 128900,     
+    discount: 10,      
     type: 'premium',
     category: 'hero-skin'
   },
+
+  // ===== ITEM SHOP =====
   'emote-79': { 
     id: 'emote-79',
     name: 'Emote', 
     diamond: 79, 
-    price: 7900, 
-    discount: 10,
+    price: 8900,
+    discount: 10,      
     type: 'normal',
     category: 'item-shop'
   },
@@ -86,8 +90,8 @@ const PRICING_CONFIG = {
     id: 'emote-109',
     name: 'Emote', 
     diamond: 109, 
-    price: 10900, 
-    discount: 0,
+    price: 11900,
+    discount: 5,      
     type: 'normal',
     category: 'item-shop'
   },
@@ -95,8 +99,8 @@ const PRICING_CONFIG = {
     id: 'rename-card-239',
     name: 'Rename Card', 
     diamond: 239, 
-    price: 23900, 
-    discount: 0,
+    price: 26900,
+    discount: 15, 
     type: 'normal',
     category: 'item-shop'
   },
@@ -104,8 +108,8 @@ const PRICING_CONFIG = {
     id: 'squad-rename-299',
     name: 'Squad Rename Card', 
     diamond: 299, 
-    price: 29900, 
-    discount: 0,
+    price: 33900,
+    discount: 15,      
     type: 'normal',
     category: 'item-shop'
   },
@@ -113,8 +117,8 @@ const PRICING_CONFIG = {
     id: 'flag-change-300',
     name: 'Flag Change Card', 
     diamond: 300, 
-    price: 30000, 
-    discount: 0,
+    price: 34900,
+    discount: 10,      
     type: 'normal',
     category: 'item-shop'
   },
@@ -122,17 +126,19 @@ const PRICING_CONFIG = {
     id: 'creation-camp-50',
     name: 'Creation Camp', 
     diamond: 50, 
-    price: 5000, 
-    discount: 0,
+    price: 5900,
+    discount: 15,      
     type: 'normal',
     category: 'item-shop'
   },
+
+  // ===== STARLIGHT (KEEP HARGA AKHIR) =====
   'starlight-300': { 
     id: 'starlight-300',
     name: 'Starlight', 
     diamond: 300, 
-    price: 30000, 
-    discount: 0,
+    price: 33900,      
+    discount: 10,      
     type: 'premium',
     category: 'item-shop'
   },
@@ -140,17 +146,19 @@ const PRICING_CONFIG = {
     id: 'premium-starlight-750',
     name: 'Premium Starlight', 
     diamond: 750, 
-    price: 75000, 
-    discount: 20, 
+    price: 79000,      
+    discount: 20,      
     type: 'premium',
     category: 'item-shop'
   },
+
+  // ===== CHARISMA (MAIN HARGA CORET, DISKON TETAP) =====
   'charisma-8': { 
     id: 'charisma-8',
     name: 'Charisma', 
     diamond: 8, 
-    price: 800, 
-    discount: 50,
+    price: 1500,       
+    discount: 50,      
     type: 'normal',
     category: 'charisma'
   },
@@ -158,8 +166,8 @@ const PRICING_CONFIG = {
     id: 'charisma-20',
     name: 'Charisma', 
     diamond: 20, 
-    price: 2000, 
-    discount: 50,
+    price: 4000,       
+    discount: 50,      
     type: 'normal',
     category: 'charisma'
   },
@@ -167,8 +175,8 @@ const PRICING_CONFIG = {
     id: 'angel-ark-499',
     name: 'Angel Ark', 
     diamond: 499, 
-    price: 49900, 
-    discount: 20,
+    price: 55900,      
+    discount: 20,      
     type: 'normal',
     category: 'charisma'
   },
@@ -176,8 +184,8 @@ const PRICING_CONFIG = {
     id: 'paradise-island-499',
     name: 'Paradise Island', 
     diamond: 499, 
-    price: 49900, 
-    discount: 20,
+    price: 55900,
+    discount: 20,      
     type: 'normal',
     category: 'charisma'
   },
@@ -185,17 +193,19 @@ const PRICING_CONFIG = {
     id: 'goldmoon-lantern-999',
     name: 'Goldmoon Lantern', 
     diamond: 999, 
-    price: 99900, 
-    discount: 30, 
+    price: 114900,     
+    discount: 20,      
     type: 'premium',
     category: 'charisma'
   },
+
+  // ===== LIVE STREAM (DISKON TETAP) =====
   'flower-2': { 
     id: 'flower-2',
     name: 'Flower', 
     diamond: 2, 
     price: 200, 
-    discount: 0,
+    discount: 50,
     type: 'normal',
     category: 'live-stream'
   },
@@ -204,7 +214,7 @@ const PRICING_CONFIG = {
     name: 'Jewelry', 
     diamond: 6, 
     price: 600, 
-    discount: 0,
+    discount: 50,
     type: 'normal',
     category: 'live-stream'
   },
@@ -236,7 +246,6 @@ const PRICING_CONFIG = {
     category: 'live-stream'
   }
 };
-
 // ===== KATEGORI CONFIG =====
 const CATEGORIES = [
   {
