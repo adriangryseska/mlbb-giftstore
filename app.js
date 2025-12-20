@@ -176,7 +176,7 @@ const PRICING_CONFIG = {
     name: 'Angel Ark', 
     diamond: 499, 
     price: 55900,      
-    discount: 20,      
+    discount: 30,      
     type: 'normal',
     category: 'charisma'
   },
@@ -185,7 +185,7 @@ const PRICING_CONFIG = {
     name: 'Paradise Island', 
     diamond: 499, 
     price: 55900,
-    discount: 20,      
+    discount: 30,      
     type: 'normal',
     category: 'charisma'
   },
