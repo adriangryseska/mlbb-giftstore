@@ -867,7 +867,7 @@ bindEvents() {
             message += `• ${item.name}\n`;
             message += `  Kategori: ${item.categoryName}\n`;
             message += `  Jumlah: ${item.quantity}x\n`;
-            message += `  Harga: Rp${item.finalPrice.toLocaleString()} (💎${item.diamond.toLocaleString()})\n`;
+            message += `  Harga: Rp${item.finalPrice.toLocaleString()} (Setara 💎${item.diamond.toLocaleString()})\n`;
             if (item.discount > 0) {
                 message += `  Diskon: ${item.discount}% OFF\n`;
             }
