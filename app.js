@@ -251,7 +251,7 @@ const PRICING_CONFIG = {
     name: 'Airplane', 
     diamond: 5000, 
     price: 500000, 
-    discount: 50, 
+    discount: 30, 
     type: 'premium',
     category: 'live-stream'
   }
