@@ -301,7 +301,7 @@ class MLBBGiftStore {
                 name: "MLBB Gift",
                 subtitle: "Harga terjangkau • Proses cepat • Terpercaya",
                 status: "open",
-                lastUpdate: "19 Desember 2025",
+                lastUpdate: "23 Desember 2025",
                 whatsappNumber: "62895357381660",
                 requirements: "Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift."
             },
