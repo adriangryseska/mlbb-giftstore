@@ -3,6 +3,16 @@
 
 const PRICING_CONFIG = {
   // ===== HERO SKIN (RATE NAIK SESUAI NOMINAL: KECIL 1:90, BESAR 1:120+) =====
+
+  'skin-basic-269': { 
+    id: 'skin-basic-269',
+    name: 'Skin Basic', 
+    diamond: 269, 
+    price: 28900,
+    discount: 10,      
+    type: 'normal',
+    category: 'hero-skin'
+  },
   'skin-basic-269': { 
     id: 'skin-basic-269',
     name: 'Skin Basic', 
@@ -137,7 +147,7 @@ const PRICING_CONFIG = {
     id: 'starlight-300',
     name: 'Starlight', 
     diamond: 300, 
-    price: 33900,      
+    price: 33400,      
     discount: 10,      
     type: 'premium',
     category: 'item-shop'
