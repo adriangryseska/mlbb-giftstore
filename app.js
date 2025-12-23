@@ -280,7 +280,7 @@ const CATEGORIES = [
   },
   {
     id: "collaboration",
-    name: "Gift Skin Event/Kolaborasi (Giftable)",
+    name: "Gift Skin Event/Limit/Kolaborasi/Terbaru (Giftable)",
     icon: "🪞",
     special: true,
     message: "Silakan chat admin untuk info ketersediaan skin event/kolaborasi/skin terbaru selain dari list harga tercantum (harga gift awal event dan akhir event bisa saja berbeda)."
