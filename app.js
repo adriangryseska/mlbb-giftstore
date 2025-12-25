@@ -6,16 +6,7 @@ const PRICING_CONFIG = {
 
   'skin-basic-269': { 
     id: 'skin-basic-269',
-    name: 'Skin Basic', 
-    diamond: 269, 
-    price: 28900,
-    discount: 10,      
-    type: 'normal',
-    category: 'hero-skin'
-  },
-  'skin-basic-269': { 
-    id: 'skin-basic-269',
-    name: 'Skin Basic', 
+    name: 'Skin Basic 269dm', 
     diamond: 269, 
     price: 28900,
     discount: 10,      
@@ -24,7 +15,7 @@ const PRICING_CONFIG = {
   },
   'skin-basic-299': { 
     id: 'skin-basic-299',
-    name: 'Skin Basic', 
+    name: 'Skin Basic 299dm', 
     diamond: 299, 
     price: 31900,
     discount: 10, 
@@ -33,16 +24,16 @@ const PRICING_CONFIG = {
   },
   'skin-elite-399': { 
     id: 'skin-elite-399',
-    name: 'Skin Elite', 
+    name: 'Skin Elite / Setara 399dm', 
     diamond: 399, 
-    price: 42900,      
+    price: 48900,      
     discount: 5,
     type: 'normal',
     category: 'hero-skin'
   },
   'skin-elite-599': { 
     id: 'skin-elite-599',
-    name: 'Skin Elite', 
+    name: 'Skin Elite / Setara 599dm', 
     diamond: 599, 
     price: 65900,      
     discount: 5,
@@ -60,28 +51,28 @@ const PRICING_CONFIG = {
   },
   'skin-special-749': { 
     id: 'skin-special-749',
-    name: 'Skin Special', 
+    name: 'Skin Special / Setara 749', 
     diamond: 749, 
     price: 85900,      
-    discount: 10,      
+    discount: 5,      
     type: 'normal',
     category: 'hero-skin'
   },
   'skin-epic-899': { 
     id: 'skin-epic-899',
-    name: 'Skin Epic', 
+    name: 'Skin Epic / Setara 899dm', 
     diamond: 899, 
-    price: 104900,     
-    discount: 10,      
+    price: 105900,     
+    discount: 5,      
     type: 'premium',
     category: 'hero-skin'
   },
   'skin-lightborn-1089': { 
     id: 'skin-lightborn-1089',
-    name: 'Skin Lightborn / P.Ace', 
+    name: 'Skin Lightborn / P.Ace / Patrick (event)', 
     diamond: 1089, 
-    price: 128900,     
-    discount: 10,      
+    price: 138900,     
+    discount: 5,      
     type: 'premium',
     category: 'hero-skin'
   },
