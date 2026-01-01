@@ -163,11 +163,11 @@
     --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
     --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
     
-    /* Semantic Color Tokens (Dark Mode) */
-    --color-background: var(--color-charcoal-700);
-    --color-surface: var(--color-charcoal-800);
+    /* Semantic Color Tokens (Dark Mode) - tweaked for better surface separation */
+    --color-background: rgba(20,22,24,1); /* slightly lighter than charcoal for contrast */
+    --color-surface: rgba(30,33,36,1); /* card / surface slightly brighter than background */
     --color-text: var(--color-gray-200);
-    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.78);
     --color-primary: var(--color-teal-300);
     --color-primary-hover: var(--color-teal-400);
     --color-primary-active: var(--color-teal-800);
@@ -181,10 +181,11 @@
     --color-info: var(--color-gray-300);
     --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
     --color-btn-primary-text: var(--color-slate-900);
-    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
-    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
-    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.28);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.18);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+    --shadow-md: 0 6px 18px rgba(0,0,0,0.45);
     --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
     --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
     --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
@@ -223,11 +224,11 @@
   --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
   --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
   
-  /* Semantic Color Tokens (Dark Mode) */
-  --color-background: var(--color-charcoal-700);
-  --color-surface: var(--color-charcoal-800);
+  /* Semantic Color Tokens (Dark Mode) - tweaked for clearer separation */
+  --color-background: rgba(20,22,24,1);
+  --color-surface: rgba(30,33,36,1);
   --color-text: var(--color-gray-200);
-  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.78);
   --color-primary: var(--color-teal-300);
   --color-primary-hover: var(--color-teal-400);
   --color-primary-active: var(--color-teal-800);
@@ -241,10 +242,11 @@
   --color-info: var(--color-gray-300);
   --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
   --color-btn-primary-text: var(--color-slate-900);
-  --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
-  --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
-  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.28);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.18);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+    --shadow-md: 0 6px 18px rgba(0,0,0,0.45);
   --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
   --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
 
@@ -782,6 +784,7 @@ select.form-control {
   font-family: 'FKGroteskNeue';
   src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
     format('woff2');
+  font-display: swap;
 }
 
 /* END PERPLEXITY DESIGN SYSTEM */
@@ -798,6 +801,92 @@ select.form-control {
   --mlbb-glass: rgba(255, 255, 255, 0.1);
   --gaming-shadow: 0 8px 32px rgba(17, 63, 103, 0.3);
   --gaming-glow: 0 0 20px rgba(251, 191, 36, 0.3);
+
+/* Recommendation & stock badges */
+.product-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  margin-left: 8px;
+}
+.product-badge.hot {
+  background: linear-gradient(90deg, rgba(255,120,20,1), rgba(255,80,30,1)); /* warm orange */
+  box-shadow: 0 6px 18px rgba(255,120,20,0.12);
+}
+.product-badge.out-of-stock {
+  background: rgba(107, 114, 128, 0.12);
+  color: var(--color-text);
+  border: 1px solid rgba(107, 114, 128, 0.15);
+}
+
+/* Item type styles in detail view */
+.item-type.hot {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(255,120,20,0.12);
+  color: #ff6a00;
+  font-weight: 700;
+}
+.item-type.out-of-stock {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(128, 128, 128, 0.08);
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* Disabled / out-of-stock button style */
+.action-btn.disabled,
+.btn.disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(0.15);
+}
+
+/* Small adjustments for product actions */
+.product-actions .action-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Prominent HABIS ribbon and dimming for out-of-stock cards */
+.product-card.out-of-stock {
+  opacity: 0.6;
+  filter: grayscale(0.18);
+  position: relative;
+}
+.product-card.out-of-stock::before {
+  content: 'HABIS';
+  position: absolute;
+  top: 12px;
+  right: -36px;
+  transform: rotate(20deg);
+  background: rgba(60, 60, 67, 0.12);
+  color: var(--color-text);
+  font-weight: 800;
+  padding: 8px 52px;
+  border-radius: 6px;
+  border: 1px solid rgba(60,60,67,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.product-card.out-of-stock .product-price,
+.product-card.out-of-stock .product-actions {
+  opacity: 0.9;
+}
+
   --discount-color: #ef4444;
   --discount-bg: rgba(239, 68, 68, 0.1);
 }
@@ -849,6 +938,41 @@ body::before {
   gap: var(--space-24);
 }
 
+/* Dark-mode header adjustments: stronger surface, border, and shadow */
+[data-color-scheme="dark"] .header {
+  background: rgba(28,30,33,0.8);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.55);
+}
+
+[data-color-scheme="dark"] .logo-text h1 {
+  /* ensure header title is readable and not clipped by gradient */
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+  color: var(--color-text);
+}
+
+/* Auto theme toggle button */
+.theme-auto-toggle {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 13px;
+}
+.theme-auto-toggle:hover {
+  background: rgba(255,255,255,0.02);
+  color: var(--color-text);
+}
+.theme-auto-toggle.auto-off {
+  opacity: 0.7;
+  border-style: dashed;
+}
+
 .logo-section {
   display: flex;
   align-items: center;
@@ -877,7 +1001,7 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: var(--font-size-2xl);
+  font-size: clamp(18px, 3.8vw, var(--font-size-2xl));
   font-weight: var(--font-weight-bold);
   margin: 0;
 }
@@ -888,15 +1012,26 @@ body::before {
   margin: 0;
 }
 
+/* concise subtitle */
+.logo-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
+
+/* Store status (OPEN/CLOSE) responsive badge */
 .store-status {
   display: inline-block;
-  padding: 6px 16px;
-  border-radius: 8px;
+  padding: 6px 10px;
+  border-radius: 10px;
   font-weight: 600;
-  font-size: 15px;
-  margin-bottom: 8px;
-  margin-top: 8px;
-  letter-spacing: 0.01em;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(12px, 2.4vw, 14px);
 }
 .store-status.open {
   background: rgba(var(--color-success-rgb), 0.12);
@@ -907,6 +1042,21 @@ body::before {
   background: rgba(var(--color-error-rgb), 0.12);
   color: var(--color-error);
   border: 1.5px solid var(--color-error);
+}
+
+/* logo layout to avoid wrapping */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-icon {
+  font-size: 1.6rem;
 }
 
 .header-actions {
@@ -1412,6 +1562,121 @@ body::before {
   border-top: 1px solid var(--color-card-border);
 }
 
+/* Buyer Info Modal Form */
+.modal-body .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.modal-body .form-row label {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.modal-body .form-row input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-card-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.modal-body .form-row input[type="text"]:focus {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-color: var(--color-primary);
+}
+
+/* Align modal footer buttons to right and add spacing */
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Ensure modal sizing for the buyer form is comfortable on mobile */
+@media (max-width: 480px) {
+  .modal-content {
+    max-width: 92%;
+    padding: 0;
+  }
+  .modal-body {
+    padding: 16px;
+  }
+  .modal-header,
+  .modal-footer {
+    padding: 12px 16px;
+  }
+}
+
+/* Bottom sticky filter tabs (mobile) */
+.bottom-filter-tabs {
+  display: none; /* shown only on small screens */
+}
+
+.bottom-filter-tabs .filter-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.bottom-filter-tabs .filter-tab {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.bottom-filter-tabs {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1200;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  padding: 6px;
+  backdrop-filter: blur(6px);
+}
+
+/* subtle left/right gradient indicators to hint horizontal scroll */
+.bottom-filter-tabs::before,
+.bottom-filter-tabs::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 36px;
+  pointer-events: none;
+  z-index: 1201;
+}
+.bottom-filter-tabs::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--color-surface), rgba(0,0,0,0));
+}
+.bottom-filter-tabs::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--color-surface), rgba(0,0,0,0));
+}
+
+/* Hide top filter tabs and show bottom on small screens */
+@media (max-width: 768px) {
+  /* Keep top filter tabs visible on small screens to avoid hiding navigation */
+  .bottom-filter-tabs {
+    display: block;
+  }
+  body {
+    padding-bottom: 120px; /* prevent content behind sticky tabs; increased to avoid footer overlap */
+  }
+}
+
 /* Cart Styles - Updated for new pricing */
 .cart-item {
   display: flex;
@@ -1517,6 +1782,60 @@ body::before {
 .cart-actions {
   display: flex;
   gap: var(--space-12);
+}
+  /* Tweak header for very small screens to avoid wrapping */
+  .header-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .header-actions {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .search-input {
+    width: 140px;
+  }
+
+  .logo-icon {
+    font-size: 1.1rem; /* smaller icon on small devices */
+  }
+
+  .logo-text h1 {
+    font-size: clamp(16px, 4.2vw, 20px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .logo-subtitle { display: none; }
+
+  .store-status {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+
+/* Extra small: reduce more for very narrow phones */
+@media (max-width: 360px) {
+  .logo-icon { font-size: 1rem; }
+  .logo-text h1 { font-size: 15px; }
+  .search-input { width: 110px; }
+  .bottom-filter-tabs { left: 8px; right: 8px; bottom: 8px; }
 }
 
 /* Item Detail Modal Styles */
@@ -2641,6 +2960,7 @@ select.form-control {
   font-family: 'FKGroteskNeue';
   src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
     format('woff2');
+  font-display: swap;
 }
 
 /* END PERPLEXITY DESIGN SYSTEM */
