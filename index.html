@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-color-scheme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,9 +21,7 @@
                         <div class="logo-icon">⚔️</div>
                         <div class="logo-text">
                             <h1>MLBB Gift Store</h1>
-                            <p>Pengen skin/item MLBB, tapi harga Diamond mahal?</p>
-                            <p>Beli aja via gift! Langsung dikirim ke akun kamu!</p>
-                            <p>Cek stok sekarang!</p>
+                            <p class="logo-subtitle">Harga terjangkau • Proses cepat • Terpercaya</p>
                         </div>
                     </div>
                     <div id="storeStatus" class="store-status"></div>
@@ -38,6 +37,7 @@
                         <button class="theme-toggle" id="themeToggle">
                             <span class="theme-icon">🌙</span>
                         </button>
+                        <button class="theme-auto-toggle" id="themeAutoToggle" title="Auto theme (WIB)">Auto: On</button>
                         
                         <button class="cart-btn" id="cartBtn">
                             <span class="cart-icon">🛒</span>
@@ -147,11 +147,40 @@
         </div>
     </div>
 
+    <!-- Buyer Info Modal -->
+    <div class="modal hidden" id="buyerInfoModal">
+        <div class="modal-overlay" id="buyerInfoOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Informasi Penerima</h3>
+                <button class="close-modal" id="buyerInfoClose">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <label for="buyerIdInput">ID (wajib)</label>
+                    <input type="text" id="buyerIdInput" placeholder="Contoh: 123456789">
+                </div>
+                <div class="form-row">
+                    <label for="buyerServerInput">Server</label>
+                    <input type="text" id="buyerServerInput" placeholder="Contoh: 1234">
+                </div>
+                <div class="form-row">
+                    <label for="buyerNicknameInput">Nickname (opsional)</label>
+                    <input type="text" id="buyerNicknameInput" placeholder="Contoh: PlayerMLBB">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--secondary" id="buyerCancel">Batal</button>
+                <button class="btn btn--primary" id="buyerConfirm">Kirim Pesanan</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
     <div class="floating-whatsapp">
-        <button class="whatsapp-btn" id="floatingWhatsapp">
+        <button class="whatsapp-btn" id="floatingWhatsapp" aria-label="Hubungi Kami">
             <span class="whatsapp-icon">💬</span>
-            <span class="whatsapp-text">Chat Admin</span>
+            <span class="whatsapp-text">Hubungi Kami</span>
         </button>
     </div>
 
@@ -180,12 +209,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>© 2025 MLBB Gift Store</div>
+                <div>© 2025-2026 MLBB Gift Store</div>
                 <div id="lastUpdateFooter"></div>
             </div>
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>
