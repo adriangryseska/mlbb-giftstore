@@ -28,7 +28,7 @@ const PRICING_CONFIG = {
     id: 'skin-elite-399',
     name: 'Skin Elite (💎399)', 
     diamond: 399, 
-    price: 55000,      
+    price: 49000,      
     discount: 10,
     category: 'hero-skin',
     recommended: false,
