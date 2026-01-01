@@ -36,10 +36,10 @@ const PRICING_CONFIG = {
   },
     'skin-m7-pass-399': { 
     id: 'skin-M7-pass-399',
-    name: 'Skin M7 PASS (💎399)', 
+    name: '(EVENT) Skin M7 PASS (💎399)', 
     diamond: 399, 
-    price: 55000,      
-    discount: 0,
+    price: 67000,      
+    discount: 10,
     category: 'hero-skin',
     recommended: true,
     stock: 0
