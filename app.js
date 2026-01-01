@@ -1055,7 +1055,7 @@ bindEvents() {
 
         if (buyerInfo) {
             message += `ID: ${buyerInfo.id}\n`;
-            message += `Server: ${buyerInfo.server}\n`;
+            if (buyerInfo.server) message += `Server: ${buyerInfo.server}\n`;
             if (buyerInfo.nickname) message += `Nickname: ${buyerInfo.nickname}\n`;
             message += `\n`;
         }
@@ -1125,8 +1125,8 @@ bindEvents() {
                 const id = idInput.value.trim();
                 const server = serverInput.value.trim();
                 const nickname = nicknameInput.value.trim();
-                if (!id || !server) {
-                    this.showToast('ID dan Server wajib diisi', 'error');
+                if (!id) {
+                    this.showToast('ID wajib diisi', 'error');
                     return;
                 }
                 cleanup();
