@@ -89,7 +89,7 @@ const PRICING_CONFIG = {
     name: 'Skin Lightborn (💎1089)', 
     diamond: 1089, 
     price: 138900,     
-    discount: 5,      
+    discount: 20,      
     category: 'hero-skin',
     recommended: false,
     stock: 1
@@ -99,7 +99,7 @@ const PRICING_CONFIG = {
     name: 'Skin P-ACE (💎1089)',
     diamond: 1089, 
     price: 138900,     
-    discount: 5,      
+    discount: 10,      
     category: 'hero-skin',
     recommended: true,
     stock: 1
@@ -109,7 +109,7 @@ const PRICING_CONFIG = {
     name: '(EVENT) Skin Patrick (💎1089)', 
     diamond: 1089, 
     price: 138900,     
-    discount: 5,      
+    discount: 10,      
     category: 'hero-skin',
     recommended: true,
     stock: 1
