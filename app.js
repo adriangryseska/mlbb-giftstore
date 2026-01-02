@@ -89,7 +89,7 @@ const PRICING_CONFIG = {
     name: 'Skin Lightborn (💎1089)', 
     diamond: 1089, 
     price: 138900,     
-    discount: 20,      
+    discount: 15,      
     category: 'hero-skin',
     recommended: false,
     stock: 1
