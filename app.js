@@ -109,7 +109,7 @@ const PRICING_CONFIG = {
     name: '(EVENT) Skin Patrick (💎1089)', 
     diamond: 1089, 
     price: 138900,     
-    discount: 10,      
+    discount: 0,      
     category: 'hero-skin',
     recommended: true,
     stock: 0
