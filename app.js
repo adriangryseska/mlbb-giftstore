@@ -99,7 +99,7 @@ const PRICING_CONFIG = {
     name: 'Skin P-ACE (💎1089)',
     diamond: 1089, 
     price: 138900,     
-    discount: 10,      
+    discount: 5,      
     category: 'hero-skin',
     recommended: true,
     stock: 1
@@ -112,7 +112,7 @@ const PRICING_CONFIG = {
     discount: 10,      
     category: 'hero-skin',
     recommended: true,
-    stock: 1
+    stock: 0
   },
   // ===== ITEM SHOP =====
   'emote-79': { 
