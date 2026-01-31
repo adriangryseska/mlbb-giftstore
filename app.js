@@ -56,7 +56,7 @@ const PRICING_CONFIG = {
   },
   'skin-epic-30off': { 
     id: 'skin-epic-30off',
-    name: '(PRE-ORDER) Vexana Epic [30% OFF - 1st Week] (💎629)', 
+    name: '(PRE-ORDER) Vexana Epic [30% OFF] (💎629)', 
     diamond: 629, 
     price: 76900,
     discount: 5,
@@ -103,16 +103,6 @@ const PRICING_CONFIG = {
     category: 'hero-skin',
     recommended: true,
     stock: 1
-  },
-  'skin-patrick-1089': { 
-    id: 'skin-patrick-1089',
-    name: '(EVENT) Skin Patrick (💎1089)', 
-    diamond: 1089, 
-    price: 138900,     
-    discount: 0,      
-    category: 'hero-skin',
-    recommended: true,
-    stock: 0
   },
   // ===== ITEM SHOP =====
   'emote-79': { 
@@ -189,10 +179,10 @@ const PRICING_CONFIG = {
     id: 'premium-starlight-750',
     name: 'Premium Starlight Card', 
     diamond: 750, 
-    price: 79000,      
+    price: 75000,      
     discount: 20,      
     category: 'item-shop',    
-    recommended: true,
+    recommended: false,
     stock: 1,
   },
 
