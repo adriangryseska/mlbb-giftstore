@@ -34,16 +34,6 @@ const PRICING_CONFIG = {
     recommended: false,
     stock: 1
   },
-    'skin-m7-pass-399': { 
-    id: 'skin-M7-pass-399',
-    name: '(EVENT) Skin M7 PASS (💎399)', 
-    diamond: 399, 
-    price: 61000,      
-    discount: 10,
-    category: 'hero-skin',
-    recommended: true,
-    stock: 0
-  },
   'skin-elite-599': { 
     id: 'skin-elite-599',
     name: 'Skin Elite (💎599)', 
@@ -62,6 +52,16 @@ const PRICING_CONFIG = {
     discount: 5,
     category: 'hero-skin',
     recommended: false,
+    stock: 1
+  },
+  'skin-epic-30off': { 
+    id: 'skin-epic-30off',
+    name: '(PRE-ORDER) Vexana Epic [30% OFF - 1st Week] (💎629)', 
+    diamond: 629, 
+    price: 76900,
+    discount: 5,
+    category: 'hero-skin',
+    recommended: true,
     stock: 1
   },
   'skin-special-749': { 
@@ -359,7 +359,7 @@ class MLBBGiftStore {
                 name: "MLBB Gift",
                 subtitle: "Harga terjangkau • Proses cepat • Terpercaya",
                 status: "open",
-                lastUpdate: "24 Januari 2026",
+                lastUpdate: "31 Januari 2026",
                 whatsappNumber: "62895357381660",
                 requirements: "Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift."
             },
