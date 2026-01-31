@@ -1180,8 +1180,8 @@ bindEvents() {
                 </div>
                 
                 <div class="item-info">
-                    <h3>${item.name}</h3>
-                    ${isRecommended ? '<div class="item-type hot">🔥 TERLARIS</div>' : ''}
+                    // <h3>${item.name}</h3>
+                    ${isRecommended ? '<div class="item-type hot">🔥 REKOMENDASI</div>' : ''}
                     ${outOfStock ? '<div class="item-type out-of-stock">HABIS</div>' : ''}
                 </div>
                 
