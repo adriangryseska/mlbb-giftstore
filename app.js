@@ -755,7 +755,7 @@ bindEvents() {
         const isRecommended = !!item.recommended;
         const premiumBadge = isRecommended ? `
             <div class="product-badge hot">
-                🔥 TERLARIS
+                🔥 REKOMENDASI
             </div>
         ` : '';
 
