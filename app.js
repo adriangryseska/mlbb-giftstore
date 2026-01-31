@@ -56,9 +56,9 @@ const PRICING_CONFIG = {
   },
   'skin-epic-30off': { 
     id: 'skin-epic-30off',
-    name: '(PO) Vexana Epic - 30% OFF (💎629)', 
+    name: '(PO) Vexana Epic (💎629)', 
     diamond: 629, 
-    price: 76900,
+    price: 79000,
     discount: 5,
     category: 'hero-skin',
     recommended: true,
