@@ -56,7 +56,7 @@ const PRICING_CONFIG = {
   },
   'skin-epic-30off': { 
     id: 'skin-epic-30off',
-    name: '(PRE-ORDER) Vexana Epic [30% OFF] (💎629)', 
+    name: '(PO) Vexana Epic - 30% OFF (💎629)', 
     diamond: 629, 
     price: 76900,
     discount: 5,
@@ -755,7 +755,7 @@ bindEvents() {
         const isRecommended = !!item.recommended;
         const premiumBadge = isRecommended ? `
             <div class="product-badge hot">
-                🔥 REKOMENDASI
+                🔥 Rekomendasi
             </div>
         ` : '';
 
@@ -1180,8 +1180,8 @@ bindEvents() {
                 </div>
                 
                 <div class="item-info">
-                    // <h3>${item.name}</h3>
-                    ${isRecommended ? '<div class="item-type hot">🔥 REKOMENDASI</div>' : ''}
+                    <h3>${item.name}</h3>
+                    ${isRecommended ? '<div class="item-type hot">🔥 Rekomendasi</div>' : ''}
                     ${outOfStock ? '<div class="item-type out-of-stock">HABIS</div>' : ''}
                 </div>
                 
