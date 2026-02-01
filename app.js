@@ -54,16 +54,6 @@ const PRICING_CONFIG = {
     recommended: false,
     stock: 1
   },
-  'skin-epic-30off': { 
-    id: 'skin-epic-30off',
-    name: '(PO) Vexana Epic (💎629)', 
-    diamond: 629, 
-    price: 79000,
-    discount: 5,
-    category: 'hero-skin',
-    recommended: true,
-    stock: 1
-  },
   'skin-special-749': { 
     id: 'skin-special-749',
     name: 'Skin Special (💎749)', 
@@ -73,6 +63,16 @@ const PRICING_CONFIG = {
     category: 'hero-skin',
     recommended: false,
     stock: 1
+  },
+  'skin-epic-30off': { 
+    id: 'skin-epic-30off',
+    name: '(PO) Vexana Epic (💎629)', 
+    diamond: 629, 
+    price: 79000,
+    discount: 5,
+    category: 'hero-skin',
+    recommended: true,
+    stock: 0
   },
   'skin-epic-899': { 
     id: 'skin-epic-899',
