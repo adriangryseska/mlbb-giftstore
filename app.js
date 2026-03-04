@@ -3,7 +3,6 @@
 
 const PRICING_CONFIG = {
   // ===== HERO SKIN =====
-
   'skin-basic-269': { 
     id: 'skin-basic-269',
     name: 'Skin Basic (💎269)', 
@@ -22,6 +21,26 @@ const PRICING_CONFIG = {
     discount: 10, 
     category: 'hero-skin',
     recommended: false,
+    stock: 1
+  },
+  'skin-convenant-basic': { 
+    id: 'skin-convenant-basic-349',
+    name: 'Skin Convenant Basic (💎349)', 
+    diamond: 349, 
+    price: 60500,
+    discount: 10,      
+    category: 'hero-skin',
+    recommended: true,
+    stock: 1
+  },
+  'skin-convenant-premium': { 
+    id: 'skin-convenant-premium-599',
+    name: 'Skin Convenant Basic (💎599)', 
+    diamond: 599, 
+    price: 91000,
+    discount: 10,      
+    category: 'hero-skin',
+    recommended: true,
     stock: 1
   },
   'skin-elite-399': { 
