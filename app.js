@@ -25,7 +25,7 @@ const PRICING_CONFIG = {
   },
   'skin-convenant-basic': { 
     id: 'skin-convenant-basic-349',
-    name: 'Skin Convenant Basic (💎349)', 
+    name: 'Skin Lylia Convenant Basic (💎349)', 
     diamond: 349, 
     price: 60500,
     discount: 10,      
@@ -35,7 +35,7 @@ const PRICING_CONFIG = {
   },
   'skin-convenant-premium': { 
     id: 'skin-convenant-premium-599',
-    name: 'Skin Convenant Basic (💎599)', 
+    name: 'Skin Lylia Convenant Premium (💎599)', 
     diamond: 599, 
     price: 91000,
     discount: 10,      
