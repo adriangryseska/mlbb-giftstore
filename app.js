@@ -23,26 +23,6 @@ const PRICING_CONFIG = {
     recommended: false,
     stock: 1
   },
-  'skin-convenant-basic': { 
-    id: 'skin-convenant-basic-349',
-    name: 'Skin Lylia Convenant Basic (💎349)', 
-    diamond: 349, 
-    price: 61000,
-    discount: 10,      
-    category: 'hero-skin',
-    recommended: true,
-    stock: 1
-  },
-  'skin-convenant-premium': { 
-    id: 'skin-convenant-premium-599',
-    name: 'Skin Lylia Convenant Premium (💎599)', 
-    diamond: 599, 
-    price: 89000,
-    discount: 10,      
-    category: 'hero-skin',
-    recommended: true,
-    stock: 1
-  },
   'skin-elite-399': { 
     id: 'skin-elite-399',
     name: 'Skin Elite (💎399)', 
@@ -82,16 +62,6 @@ const PRICING_CONFIG = {
     category: 'hero-skin',
     recommended: false,
     stock: 1
-  },
-  'skin-epic-30off': { 
-    id: 'skin-epic-30off',
-    name: '(PO) Vexana Epic (💎629)', 
-    diamond: 629, 
-    price: 79000,
-    discount: 5,
-    category: 'hero-skin',
-    recommended: true,
-    stock: 0
   },
   'skin-epic-899': { 
     id: 'skin-epic-899',
