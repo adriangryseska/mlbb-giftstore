@@ -37,8 +37,8 @@ const PRICING_CONFIG = {
     id: 'skin-elite-599',
     name: 'Skin Elite (💎599)', 
     diamond: 599, 
-    price: 65900,      
-    discount: 5,
+    price: 69900,      
+    discount: 10,
     category: 'hero-skin',
     recommended: false,
     stock: 1
@@ -47,8 +47,8 @@ const PRICING_CONFIG = {
     id: 'hero-599',
     name: 'Hero (💎599)', 
     diamond: 599, 
-    price: 65900,
-    discount: 5,
+    price: 69900,
+    discount: 10,
     category: 'hero-skin',
     recommended: false,
     stock: 1
@@ -57,8 +57,8 @@ const PRICING_CONFIG = {
     id: 'skin-special-749',
     name: 'Skin Special (💎749)', 
     diamond: 749, 
-    price: 85900,      
-    discount: 5,      
+    price: 89900,      
+    discount: 10,      
     category: 'hero-skin',
     recommended: false,
     stock: 1
@@ -67,8 +67,8 @@ const PRICING_CONFIG = {
     id: 'skin-epic-899',
     name: 'Skin Epic (💎899)', 
     diamond: 899, 
-    price: 102900,     
-    discount: 5,      
+    price: 109900,     
+    discount: 10,      
     category: 'hero-skin',
     recommended: false,
     stock: 1
@@ -88,7 +88,7 @@ const PRICING_CONFIG = {
     name: 'Skin P-ACE (💎1089)',
     diamond: 1089, 
     price: 138900,     
-    discount: 5,      
+    discount: 10,      
     category: 'hero-skin',
     recommended: true,
     stock: 1
@@ -108,8 +108,8 @@ const PRICING_CONFIG = {
     id: 'emote-109',
     name: 'Emote (💎109)', 
     diamond: 109, 
-    price: 11900,
-    discount: 5,      
+    price: 13000,
+    discount: 10,      
     category: 'item-shop',
     recommended: true,
     stock: 1,
@@ -158,7 +158,7 @@ const PRICING_CONFIG = {
     id: 'starlight-300',
     name: 'Normal Starlight Card', 
     diamond: 300,
-    price: 32300,      
+    price: 33300,      
     discount: 10,      
     category: 'item-shop',
     recommended: true,
@@ -184,7 +184,7 @@ const PRICING_CONFIG = {
     discount: 50,      
     category: 'charisma',
     recommended: false,
-    stock: 1,
+    stock: 0,
   },
   'charisma-20': { 
     id: 'charisma-20',
@@ -194,7 +194,7 @@ const PRICING_CONFIG = {
     discount: 50,      
     category: 'charisma',
     recommended: false,
-    stock: 1,
+    stock: 0,
   },
   'angel-ark-499': { 
     id: 'angel-ark-499',
@@ -204,7 +204,7 @@ const PRICING_CONFIG = {
     discount: 40,      
     category: 'charisma',
     recommended: false,
-    stock: 1,
+    stock: 0,
   },
   'paradise-island-499': { 
     id: 'paradise-island-499',
@@ -224,7 +224,7 @@ const PRICING_CONFIG = {
     discount: 30,      
     category: 'charisma',
     recommended: false,
-    stock: 1,
+    stock: 0,
   },
 
   // ===== LIVE STREAM (DISKON TETAP) =====
@@ -236,7 +236,7 @@ const PRICING_CONFIG = {
     discount: 50,
     category: 'live-stream',
     recommended: false,
-    stock: 1,
+    stock: 0,
   },
   'jewelry-6': { 
     id: 'jewelry-6',
@@ -246,7 +246,7 @@ const PRICING_CONFIG = {
     discount: 50,
     category: 'live-stream',
     recommended: false,
-    stock: 1,
+    stock: 0,
   },
   'roadster-250': { 
     id: 'roadster-250',
@@ -256,7 +256,7 @@ const PRICING_CONFIG = {
     discount: 20,
     category: 'live-stream',
     recommended: false,
-    stock: 1,
+    stock: 0,
   },
   'yacht-1000': { 
     id: 'yacht-1000',
@@ -266,7 +266,7 @@ const PRICING_CONFIG = {
     discount: 20,
     category: 'live-stream',
     recommended: false,
-    stock: 1,
+    stock: 0,
   },
   'airplane-5000': { 
     id: 'airplane-5000',
@@ -338,7 +338,7 @@ class MLBBGiftStore {
                 name: "MLBB Gift",
                 subtitle: "Harga terjangkau • Proses cepat • Terpercaya",
                 status: "close",
-                lastUpdate: "29 Maret 2026",
+                lastUpdate: "12 April 2026",
                 whatsappNumber: "62895357381660",
                 requirements: "Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift."
             },
