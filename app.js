@@ -313,7 +313,7 @@ const CATEGORIES = [
 
 // ===== PRICE ROUNDING CONFIG =====
 // Ubah nilai ini jika ingin kelipatan pembulatan lain (mis. 1000, 100, dst.)
-const PRICE_ROUNDING = 1000;
+const PRICE_ROUNDING = 500;
 
 // ===== THEME (TIME-BASED) CONFIG =====
 // If enabled, theme switches based on Indonesia Barat (WIB) local time:
