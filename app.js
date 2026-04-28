@@ -3,6 +3,27 @@
 
 const PRICING_CONFIG = {
   // ===== HERO SKIN =====
+  'po-allstar-basic-349': { 
+    id: 'po-allstar-basic-349',
+    name: '[PO] Pharsa Allstar Basic (💎349)', 
+    diamond: 349, 
+    price: 61000,
+    discount: 10,      
+    category: 'hero-skin',
+    recommended: true,
+    stock: 1
+  },
+    'po-allstar-premium-599': { 
+    id: 'po-allstar-premium-599',
+    name: '[PO] Pharsa Allstar Premium (💎599)', 
+    diamond: 599, 
+    price: 98000,
+    discount: 10,      
+    category: 'hero-skin',
+    recommended: true,
+    stock: 1
+  },
+
   'skin-basic-269': { 
     id: 'skin-basic-269',
     name: 'Skin Basic (💎269)', 
