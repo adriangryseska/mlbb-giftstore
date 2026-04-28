@@ -158,7 +158,7 @@ const PRICING_CONFIG = {
     id: 'starlight-300',
     name: 'Normal Starlight Card', 
     diamond: 300,
-    price: 35000,      
+    price: 35500,      
     discount: 10,      
     category: 'item-shop',
     recommended: true,
