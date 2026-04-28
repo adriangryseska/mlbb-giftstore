@@ -7,7 +7,7 @@ const PRICING_CONFIG = {
     id: 'po-allstar-basic-349',
     name: '[PO] Pharsa Allstar Basic (💎349)', 
     diamond: 349, 
-    price: 61000,
+    price: 63000,
     discount: 10,      
     category: 'hero-skin',
     recommended: true,
