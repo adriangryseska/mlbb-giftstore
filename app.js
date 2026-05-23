@@ -4,8 +4,8 @@
 const PRICING_CONFIG = {
   // ===== HERO SKIN =====
   'po-allstar-basic-349': { 
-    id: 'po-allstar-basic-349',
-    name: '[PO] Pharsa Allstar Basic (💎349)', 
+    id: 'allstar-basic-349',
+    name: 'Pharsa Allstar Basic (💎349)', 
     diamond: 349, 
     price: 64500,
     discount: 10,      
@@ -13,9 +13,9 @@ const PRICING_CONFIG = {
     recommended: true,
     stock: 1
   },
-    'po-allstar-premium-599': { 
-    id: 'po-allstar-premium-599',
-    name: '[PO] Pharsa Allstar Premium (💎599)', 
+    'allstar-premium-599': { 
+    id: 'allstar-premium-599',
+    name: 'Pharsa Allstar Premium (💎599)', 
     diamond: 599, 
     price: 94500,
     discount: 10,      
@@ -23,7 +23,26 @@ const PRICING_CONFIG = {
     recommended: true,
     stock: 1
   },
-
+    'allstar-ling-disc':{
+    id: 'allstar-ling-disc',
+    name: 'Ling Allstar - 30% off (💎762)', 
+    diamond: 763, 
+    price: 115500,
+    discount: 10,      
+    category: 'hero-skin',
+    recommended: true,
+    stock: 1
+  },
+    'allstar-ling':{
+    id: 'allstar-ling',
+    name: 'Ling Allstar (💎1089)', 
+    diamond: 1089, 
+    price: 148500,
+    discount: 10,      
+    category: 'hero-skin',
+    recommended: true,
+    stock: 1
+  },
   'skin-basic-269': { 
     id: 'skin-basic-269',
     name: 'Skin Basic (💎269)', 
