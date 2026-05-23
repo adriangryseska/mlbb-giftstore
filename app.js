@@ -27,7 +27,7 @@ const PRICING_CONFIG = {
     id: 'allstar-ling-disc',
     name: 'Ling Allstar - 30% off (💎762)', 
     diamond: 763, 
-    price: 110500,
+    price: 116000,
     discount: 10,      
     category: 'hero-skin',
     recommended: true,
