@@ -3,46 +3,6 @@
 
 const PRICING_CONFIG = {
   // ===== HERO SKIN =====
-  'po-allstar-basic-349': { 
-    id: 'allstar-basic-349',
-    name: 'Pharsa Allstar Basic (💎349)', 
-    diamond: 349, 
-    price: 64500,
-    discount: 10,      
-    category: 'hero-skin',
-    recommended: true,
-    stock: 1
-  },
-    'allstar-premium-599': { 
-    id: 'allstar-premium-599',
-    name: 'Pharsa Allstar Premium (💎599)', 
-    diamond: 599, 
-    price: 94500,
-    discount: 10,      
-    category: 'hero-skin',
-    recommended: true,
-    stock: 1
-  },
-    'allstar-ling-disc':{
-    id: 'allstar-ling-disc',
-    name: 'Ling Allstar - 30% off (💎762)', 
-    diamond: 763, 
-    price: 116000,
-    discount: 10,      
-    category: 'hero-skin',
-    recommended: true,
-    stock: 1
-  },
-    'allstar-ling':{
-    id: 'allstar-ling',
-    name: 'Ling Allstar (💎1089)', 
-    diamond: 1089, 
-    price: 150000,
-    discount: 10,      
-    category: 'hero-skin',
-    recommended: true,
-    stock: 1
-  },
   'skin-basic-269': { 
     id: 'skin-basic-269',
     name: 'Skin Basic (💎269)', 
@@ -377,7 +337,7 @@ class MLBBGiftStore {
             storeInfo: {
                 name: "MLBB Gift",
                 subtitle: "Harga terjangkau • Proses cepat • Terpercaya",
-                status: "open",
+                status: "close",
                 lastUpdate: "23 Mei 2026",
                 whatsappNumber: "62895357381660",
                 requirements: "Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift."
