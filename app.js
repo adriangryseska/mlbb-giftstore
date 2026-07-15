@@ -75,7 +75,7 @@ const PRICING_CONFIG = {
   },
   'skin-lightborn-1089': { 
     id: 'skin-lightborn-1089',
-    name: 'Skin Lightborn/P-Ace (💎1089)', 
+    name: 'Skin Lightborn / P-Ace (💎1089)', 
     diamond: 1089, 
     price: 150000,     
     discount: 15,      
