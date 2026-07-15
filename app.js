@@ -75,22 +75,12 @@ const PRICING_CONFIG = {
   },
   'skin-lightborn-1089': { 
     id: 'skin-lightborn-1089',
-    name: 'Skin Lightborn (💎1089)', 
+    name: 'Skin Lightborn/P-Ace (💎1089)', 
     diamond: 1089, 
     price: 150000,     
     discount: 15,      
     category: 'hero-skin',
     recommended: false,
-    stock: 1
-  },
-    'skin-pace-1089': { 
-    id: 'skin-pace-1089',
-    name: 'Skin P-ACE (💎1089)',
-    diamond: 1089, 
-    price: 150000,     
-    discount: 10,      
-    category: 'hero-skin',
-    recommended: true,
     stock: 1
   },
   // ===== ITEM SHOP =====
