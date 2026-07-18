@@ -148,7 +148,7 @@ const PRICING_CONFIG = {
     id: 'starlight-300',
     name: 'Normal Starlight Card', 
     diamond: 300,
-    price: 35500,      
+    price: 34500,      
     discount: 10,      
     category: 'item-shop',
     recommended: true,
@@ -328,7 +328,7 @@ class MLBBGiftStore {
                 name: "MLBB Gift",
                 subtitle: "Harga terjangkau • Proses cepat • Terpercaya",
                 status: "open",
-                lastUpdate: "15 Juli 2026",
+                lastUpdate: "18 Juli 2026",
                 whatsappNumber: "62895357381660",
                 requirements: "Akun harus berteman minimal 7 hari di MLBB sebelum bisa menerima gift."
             },
