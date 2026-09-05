@@ -8,7 +8,7 @@ const PRICING_CONFIG = {
     name: 'Skin Basic (💎269)', 
     diamond: 269, 
     price: 32000,
-    discount: 0,      
+    discount: 10,      
     category: 'hero-skin',
     recommended: false,
     stock: 1
@@ -18,7 +18,7 @@ const PRICING_CONFIG = {
     name: 'Skin Basic (💎299)', 
     diamond: 299, 
     price: 36000,
-    discount: 0, 
+    discount: 10, 
     category: 'hero-skin',
     recommended: false,
     stock: 1
@@ -28,7 +28,7 @@ const PRICING_CONFIG = {
     name: 'Skin Elite (💎399)', 
     diamond: 399, 
     price: 52000,      
-    discount: 5,
+    discount: 10,
     category: 'hero-skin',
     recommended: false,
     stock: 1
