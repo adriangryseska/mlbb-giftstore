@@ -275,27 +275,27 @@ const CATEGORIES = [
   {
     id: "hero-skin",
     name: "Gift Hero & Skin Shop",
-    icon: "🎨"
+    icon: ""
   },
   {
     id: "item-shop",
     name: "Gift Item Shop",
-    icon: "🎁"
+    icon: ""
   },
   {
     id: "charisma",
     name: "Gift Charisma",
-    icon: "💫"
+    icon: ""
   },
   {
     id: "live-stream",
     name: "Gift Live Stream",
-    icon: "🎥"
+    icon: ""
   },
   {
     id: "collaboration",
     name: "Gift Kolaborasi & Event Limited Lainnya",
-    icon: "🪞",
+    icon: "",
     special: true,
     message: "Silakan chat admin untuk info ketersediaan skin event/kolaborasi/skin terbaru selain dari list harga tercantum (harga gift awal event dan akhir event bisa saja berbeda)."
   }
@@ -734,7 +734,7 @@ bindEvents() {
         const isRecommended = !!item.recommended;
         const premiumBadge = isRecommended ? `
             <div class="product-badge hot">
-                🔥 Rekomendasi
+                🔥 Best Value
             </div>
         ` : '';
 
