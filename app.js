@@ -262,7 +262,7 @@ const PRICING_CONFIG = {
     discount: 0,      
     category: 'item-shop',
     recommended: true,
-    stock: 1,
+    stock: 0,
   },
   'premium-starlight-750': { 
     id: 'premium-starlight-750',
