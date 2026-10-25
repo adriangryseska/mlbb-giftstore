@@ -3,6 +3,16 @@
 
 const PRICING_CONFIG = {
   // ===== HERO SKIN =====
+  'skin-painted-188': { 
+    id: 'skin-painted-188',
+    name: 'Skin Painted (💎188)', 
+    diamond: 188, 
+    price: 26000,
+    discount: 10,      
+    category: 'hero-skin',
+    recommended: false,
+    stock: 1
+  },
   'skin-basic-269': { 
     id: 'skin-basic-269',
     name: 'Skin Basic (💎269)', 
